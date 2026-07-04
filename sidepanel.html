@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phrase Hero</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 헤더 -->
+    <div class="header">
+      <h1>🦸 <span data-i18n="appTitle">Phrase Hero</span></h1>
+      <p class="header-tagline" data-i18n="appTagline">퀴즈로 배우는 영어 표현</p>
+    </div>
+
+    <!-- 탭 -->
+    <div class="tabs">
+      <button class="tab active" data-tab="game">🎮 <span data-i18n="tabGame">게임</span></button>
+      <button class="tab" data-tab="settings">⚙️ <span data-i18n="tabSettings">설정</span></button>
+      <button class="tab" data-tab="about">ℹ️ <span data-i18n="tabAbout">About</span></button>
+    </div>
+
+    <!-- 게임 탭 -->
+    <div id="gameTab" class="tab-content active">
+      <!-- 월드 맵 화면 -->
+      <div id="worldMapScreen" class="screen">
+        <h2 class="screen-title">🌍 <span data-i18n="worldSelect">월드 선택</span></h2>
+        <div class="world-grid" id="worldGrid">
+          <!-- 월드 카드들이 JS로 생성됨 -->
+        </div>
+        <div class="best-score-display" id="bestScoreDisplay">
+          <span data-i18n="bestScore">최고 점수</span>: <span id="bestScoreValue">0</span>
+        </div>
+      </div>
+
+      <!-- 레벨 선택 화면 -->
+      <div id="levelSelectScreen" class="screen hidden">
+        <h2 class="screen-title" id="levelSelectTitle">비즈니스</h2>
+        <p class="screen-subtitle" data-i18n="selectLevel">레벨을 선택하세요</p>
+        <div class="level-buttons">
+          <button class="level-btn" data-level="1">
+            <div class="level-name">Level 1</div>
+            <div class="level-desc" data-i18n="level1Desc">동사 입력</div>
+          </button>
+          <button class="level-btn" data-level="2">
+            <div class="level-name">Level 2</div>
+            <div class="level-desc" data-i18n="level2Desc">숙어 완성</div>
+          </button>
+        </div>
+        <button class="back-btn" id="levelSelectBackBtn" data-i18n="backToWorldMap">← 월드 맵</button>
+      </div>
+
+      <!-- 게임 화면 -->
+      <div id="gameScreen" class="screen hidden">
+        <!-- 게임 헤더 -->
+        <div class="game-header">
+          <span class="world-name" id="gameWorldName">💬 Communication</span>
+          <div class="level-badge" id="gameLevelBadge">Level 1</div>
+        </div>
+
+        <!-- 진행률 -->
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div class="progress-text">
+          <span id="currentQuestion">1</span> / <span id="totalQuestions">5</span>
+        </div>
+
+        <!-- 콤보 표시 -->
+        <div class="combo-display hidden" id="comboDisplay">
+          🔥 <span id="comboCount">0</span> <span data-i18n="comboSuffix">연속 콤보!</span>
+        </div>
+
+        <!-- 문제 영역 -->
+        <div class="question-area">
+          <div class="sentence" id="sentenceText">
+            "This ___ for the delay."
+          </div>
+          <div class="hint" id="hintText">
+            💡 설명하다
+          </div>
+        </div>
+
+        <!-- Level 1: 선택지 -->
+        <div class="choices-container level1-choices hidden" id="level1Choices">
+          <!-- 선택지들이 JS로 생성됨 -->
+        </div>
+
+        <!-- Level 2: 빈침 + 단어 타일 -->
+        <div class="level2-container hidden" id="level2Container">
+          <div class="blank-slots" id="blankSlots">
+            <!-- 빈칸 슬롯은 JS로 생성됨 -->
+          </div>
+          <div class="word-tiles" id="wordTiles">
+            <!-- 단어 타일들이 JS로 생성됨 -->
+          </div>
+        </div>
+
+        <!-- 액션 버튼 -->
+        <div class="action-buttons">
+          <button class="action-btn hint-btn" id="hintBtn" data-i18n="hintBtn">💡 힌트</button>
+          <button class="action-btn skip-btn" id="skipBtn" data-i18n="skipBtn">⏭ 스킵</button>
+        </div>
+
+        <!-- 스코어보드 -->
+        <div class="score-board">
+          <div class="score-item">
+            <span class="score-label" data-i18n="scoreLabel">점수</span>
+            <span class="score-value" id="currentScore">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label" data-i18n="comboLabel">콤보</span>
+            <span class="score-value" id="currentCombo">0</span>
+          </div>
+          <div class="score-item">
+            <span class="score-label" data-i18n="bestLabel">최고</span>
+            <span class="score-value" id="currentBest">0</span>
+          </div>
+        </div>
+
+        <!-- 하단 버튼 -->
+        <button class="bottom-btn" id="gameExitBtn" data-i18n="exitBtn">← 나가기</button>
+      </div>
+
+      <!-- 월드 클리어 화면 -->
+      <div id="worldCompleteScreen" class="screen hidden">
+        <div class="completion-badge">🏆</div>
+        <h2 class="screen-title" data-i18n="worldClear">월드 클리어!</h2>
+        <div class="complete-stats">
+          <div class="stat-row">
+            <span class="stat-label"><span data-i18n="totalScore">총점</span>:</span>
+            <span class="stat-value" id="finalScore">0</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label"><span data-i18n="accuracy">정답률</span>:</span>
+            <span class="stat-value" id="accuracy">0%</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label"><span data-i18n="maxCombo">최대 콤보</span>:</span>
+            <span class="stat-value" id="maxCombo">0</span>
+          </div>
+        </div>
+        <div class="stars-display" id="starsDisplay">
+          ⭐☆☆
+        </div>
+        <div class="rank-display" id="rankDisplay">
+          🥉 Bronze
+        </div>
+        <div class="complete-buttons">
+          <button class="primary-btn" id="nextWorldBtn" data-i18n="nextWorld">다음 월드 →</button>
+          <button class="secondary-btn" id="worldMapBtn" data-i18n="worldMap">월드 맵</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 설정 탭 -->
+    <div id="settingsTab" class="tab-content hidden">
+      <h2 class="screen-title">⚙️ <span data-i18n="settings">설정</span></h2>
+
+      <div class="setting-section">
+        <h3>🌐 <span data-i18n="langSection">언어</span></h3>
+        <div class="setting-item">
+          <label class="setting-label" data-i18n="langLabel">뜻 표시 언어</label>
+          <div class="lang-selector" id="langSelector">
+            <!-- 언어 옵션은 JS로 생성됨 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-section">
+        <h3>🎮 <span data-i18n="gameSettings">게임 설정</span></h3>
+        <div class="setting-item">
+          <label class="setting-label" data-i18n="startLevel">시작 레벨</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="startLevel" value="1" checked>
+              <span data-i18n="startLevel1">Level 1 (동사 입력)</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="startLevel" value="2">
+              <span data-i18n="startLevel2">Level 2 (숙어 완성)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-section">
+        <h3>🎨 <span data-i18n="themeSection">테마</span></h3>
+        <div class="setting-item">
+          <label class="setting-label" data-i18n="themeLabel">테마 선택</label>
+          <div class="theme-selector" id="themeSelector">
+            <div class="theme-option active" data-theme="purple">
+              <div class="theme-preview purple"></div>
+              <div class="theme-name" data-i18n="themePurple">보라</div>
+            </div>
+            <div class="theme-option" data-theme="ocean">
+              <div class="theme-preview ocean"></div>
+              <div class="theme-name" data-i18n="themeOcean">바다</div>
+            </div>
+            <div class="theme-option" data-theme="sunset">
+              <div class="theme-preview sunset"></div>
+              <div class="theme-name" data-i18n="themeSunset">노을</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-section">
+        <h3>🔧 <span data-i18n="devSection">개발자 설정</span></h3>
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="debugMode">
+            <span data-i18n="debugMode">디버그 모드 (1문제로 완료)</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="setting-section">
+        <h3>💾 <span data-i18n="dataSection">데이터</span></h3>
+        <button class="danger-btn" id="resetProgressBtn" data-i18n="resetProgress">진행 초기화</button>
+      </div>
+    </div>
+
+    <!-- About 탭 -->
+    <div id="aboutTab" class="tab-content hidden">
+      <h2 class="screen-title">ℹ️ <span data-i18n="about">About</span></h2>
+
+      <div class="about-content">
+        <h3>🦸 <span data-i18n="aboutTitle">Phrase Hero v1.0</span></h3>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-value">300</span>
+            <span class="about-stat-label" data-i18n="statPhrases">숙어 개수</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-value">5</span>
+            <span class="about-stat-label" data-i18n="statWorlds">월드</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-value">2</span>
+            <span class="about-stat-label" data-i18n="statLevels">레벨</span>
+          </div>
+        </div>
+
+        <div class="about-description">
+          <p data-i18n="aboutDesc1">실생활에서 자주 쓰는 영어 표현을 퀴즈로 학습합니다.</p>
+          <p data-i18n="aboutDesc2">영어가 모국어가 아닌 학습자를 위해 여러 언어로 뜻을 제공합니다.</p>
+        </div>
+
+        <div class="about-worlds">
+          <h4>🌍 <span data-i18n="aboutWorldsTitle">월드 목록</span></h4>
+          <ul class="world-list" id="aboutWorldList">
+            <!-- 월드 목록은 JS로 생성됨 -->
+          </ul>
+        </div>
+
+        <div class="about-footer">
+          <p>© 2026 Phrase Hero</p>
+          <p>Chrome Extension Side Panel</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 점수 팝업 컨테이너 -->
+  <div id="scorePopupContainer"></div>
+
+  <script src="sidepanel-data.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

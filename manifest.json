@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Phrase Hero",
+  "version": "1.0.0",
+  "description": "퀴즈로 배우는 영어 표현. 한·일·중 등 비영어권 학습자를 위한 다국어 어휘 게임.",
+  "permissions": ["sidePanel"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Phrase Hero",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
