@@ -23,6 +23,14 @@ Japanese, Chinese, or English.
 - **Themes** — calm neutral look with Indigo / Ocean / Sunset accent colors.
 - Progress and settings are saved locally in your browser.
 
+## 📸 Screenshots
+
+| World map | Level 1 quiz |
+|---|---|
+| <img src="screenshots/01-worldmap.png" width="260" alt="World selection map"> | <img src="screenshots/03-game-level1.png" width="260" alt="Level 1 quiz — choose the verb"> |
+| **Level select** | **Settings (language & theme)** |
+| <img src="screenshots/02-levelselect.png" width="260" alt="Level selection"> | <img src="screenshots/04-settings.png" width="260" alt="Settings: language and theme"> |
+
 ## 🚀 Installation (Load Unpacked)
 
 1. Clone or download this repository.
