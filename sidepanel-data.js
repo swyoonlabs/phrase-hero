@@ -997,6 +997,8 @@ const I18N = {
     aboutDesc1: "실생활에서 자주 쓰는 영어 표현을 퀴즈로 학습합니다.",
     aboutDesc2: "영어가 모국어가 아닌 학습자를 위해 여러 언어로 뜻을 제공합니다.",
     aboutWorldsTitle: "월드 목록",
+    linksTitle: "링크",
+    linkBlog: "블로그",
     resetConfirm: "모든 진행 데이터가 초기화됩니다. 계속하시겠습니까?",
     resetDone: "초기화되었습니다."
   },
@@ -1054,6 +1056,8 @@ const I18N = {
     aboutDesc1: "日常でよく使う英語表現をクイズで学習します。",
     aboutDesc2: "英語が母語でない学習者のために、複数の言語で意味を表示します。",
     aboutWorldsTitle: "ワールド一覧",
+    linksTitle: "リンク",
+    linkBlog: "ブログ",
     resetConfirm: "すべての進捗データがリセットされます。続けますか？",
     resetDone: "リセットしました。"
   },
@@ -1111,6 +1115,8 @@ const I18N = {
     aboutDesc1: "通过测验学习日常常用的英语表达。",
     aboutDesc2: "为母语非英语的学习者提供多种语言的释义。",
     aboutWorldsTitle: "世界列表",
+    linksTitle: "链接",
+    linkBlog: "博客",
     resetConfirm: "所有进度数据将被重置。是否继续？",
     resetDone: "已重置。"
   },
@@ -1168,6 +1174,8 @@ const I18N = {
     aboutDesc1: "Learn everyday English phrases through quizzes.",
     aboutDesc2: "Meanings are shown in several languages for non-native English learners.",
     aboutWorldsTitle: "World List",
+    linksTitle: "Links",
+    linkBlog: "Blog",
     resetConfirm: "All progress data will be reset. Continue?",
     resetDone: "Reset complete."
   }
