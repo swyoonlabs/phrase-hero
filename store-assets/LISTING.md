@@ -133,10 +133,12 @@ extension's only UI surface. No website content is read and no host permissions 
 - Tick the certification: *"I do not sell or transfer user data to third parties, outside
   of the approved use cases"* etc. (all apply, since no data is collected).
 
-**Privacy policy URL** (Chrome may require one)
-- Suggested: publish a short privacy note on your blog and paste its URL, e.g.
-  `https://swyoonlabs.blogspot.com/p/phrase-hero-privacy.html`
-- A ready-to-post policy is in `store-assets/PRIVACY.md`.
+**Privacy policy URL** (Chrome may require one) — hosted on GitHub:
+```
+https://github.com/swyoonlabs/phrase-hero/blob/main/store-assets/PRIVACY.md
+```
+This renders as a readable web page on GitHub, so it works directly as the privacy policy URL.
+(The source is `store-assets/PRIVACY.md`.)
 
 ---
 
