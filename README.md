@@ -18,6 +18,8 @@ Japanese, Chinese, or English.
   - **Level 2** — build the full phrase (verb + preposition) in order.
 - **Answer reveal** — after a correct answer, the full sentence translation is shown briefly
   to reinforce learning.
+- **Review mistakes** — missed or skipped questions are tracked, and the completion screen
+  offers a review round of just those phrases.
 - **Worlds & progression** — Business, Communication, Daily Life, and more, unlocked as you go.
 - **Combo & scoring** — time and combo bonuses, stars, and ranks.
 - **Themes** — calm neutral look with Indigo / Ocean / Sunset accent colors.
@@ -28,8 +30,8 @@ Japanese, Chinese, or English.
 | World map | Level 1 quiz |
 |---|---|
 | <img src="screenshots/01-worldmap.png" width="260" alt="World selection map"> | <img src="screenshots/03-game-level1.png" width="260" alt="Level 1 quiz — choose the verb"> |
-| **Level select** | **Settings (language & theme)** |
-| <img src="screenshots/02-levelselect.png" width="260" alt="Level selection"> | <img src="screenshots/04-settings.png" width="260" alt="Settings: language and theme"> |
+| **Settings (language & theme)** | **Review mistakes** |
+| <img src="screenshots/04-settings.png" width="260" alt="Settings: language and theme"> | <img src="screenshots/05-review.png" width="260" alt="Completion screen with Review mistakes button"> |
 
 ## 🚀 Installation (Load Unpacked)
 
