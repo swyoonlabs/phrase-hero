@@ -72,6 +72,7 @@ class TOEICGame {
       rankDisplay: document.getElementById('rankDisplay'),
       nextWorldBtn: document.getElementById('nextWorldBtn'),
       worldMapBtn: document.getElementById('worldMapBtn'),
+      reviewMistakesBtn: document.getElementById('reviewMistakesBtn'),
 
       // 설정
       startLevelRadios: document.querySelectorAll('input[name="startLevel"]'),
@@ -79,7 +80,11 @@ class TOEICGame {
       resetProgressBtn: document.getElementById('resetProgressBtn'),
       themeSelector: document.getElementById('themeSelector'),
       langSelector: document.getElementById('langSelector'),
-      aboutWorldList: document.getElementById('aboutWorldList')
+      aboutWorldList: document.getElementById('aboutWorldList'),
+      aboutVersion: document.getElementById('aboutVersion'),
+      aboutStatPhrases: document.getElementById('aboutStatPhrases'),
+      aboutStatWorlds: document.getElementById('aboutStatWorlds'),
+      aboutStatLevels: document.getElementById('aboutStatLevels')
     };
 
     this.init();
@@ -110,6 +115,7 @@ class TOEICGame {
     // 월드 클리어 버튼
     this.elements.nextWorldBtn.addEventListener('click', () => this.goToNextWorld());
     this.elements.worldMapBtn.addEventListener('click', () => this.showScreen('worldMap'));
+    this.elements.reviewMistakesBtn.addEventListener('click', () => this.startReview());
 
     // 설정
     this.elements.resetProgressBtn.addEventListener('click', () => this.resetProgress());
@@ -121,11 +127,49 @@ class TOEICGame {
     this.renderLangSelector();
     this.applyI18n();
 
+    // About 탭 메타(버전/통계) 표시
+    this.renderAboutMeta();
+
     // 최고 점수 표시
     this.updateBestScoreDisplay();
 
     // 테마 적용
     this.applyTheme(this.settings.theme || 'purple');
+  }
+
+  // === 콘텐츠/월드 헬퍼 ===
+
+  // 문제 데이터가 있는 월드만 플레이 가능
+  worldHasContent(worldKey) {
+    if (!this._contentWorlds) {
+      this._contentWorlds = new Set();
+      ['level1', 'level2'].forEach(lv => {
+        TOEIC_PHRASES[lv].forEach(q => this._contentWorlds.add(q.world));
+      });
+    }
+    return this._contentWorlds.has(worldKey);
+  }
+
+  // 플레이 가능한 월드 순서 목록 (잠금 해제/다음 월드 계산에 사용)
+  playableWorlds() {
+    return Object.keys(WORLDS).filter(k => this.worldHasContent(k));
+  }
+
+  // About 탭 버전/통계 (데이터 기반, manifest 버전 사용)
+  renderAboutMeta() {
+    if (this.elements.aboutVersion) {
+      let version = '1.0.0';
+      try {
+        if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getManifest) {
+          version = chrome.runtime.getManifest().version;
+        }
+      } catch (e) { /* 확장 컨텍스트가 아니면 기본값 */ }
+      this.elements.aboutVersion.textContent = `v${version}`;
+    }
+    const phrases = TOEIC_PHRASES.level1.length + TOEIC_PHRASES.level2.length;
+    if (this.elements.aboutStatPhrases) this.elements.aboutStatPhrases.textContent = phrases;
+    if (this.elements.aboutStatWorlds) this.elements.aboutStatWorlds.textContent = this.playableWorlds().length;
+    if (this.elements.aboutStatLevels) this.elements.aboutStatLevels.textContent = Object.keys(LEVELS).length;
   }
 
   // === 다국어(i18n) 헬퍼 ===
@@ -221,7 +265,7 @@ class TOEICGame {
   renderAboutWorldList() {
     if (!this.elements.aboutWorldList) return;
     this.elements.aboutWorldList.innerHTML = '';
-    Object.keys(WORLDS).forEach(key => {
+    this.playableWorlds().forEach(key => {
       const world = WORLDS[key];
       const li = document.createElement('li');
       li.textContent = `${world.emoji} ${this.worldName(key)}`;
@@ -270,6 +314,21 @@ class TOEICGame {
 
     worldKeys.forEach((worldKey, index) => {
       const world = WORLDS[worldKey];
+      const hasContent = this.worldHasContent(worldKey);
+      // 콘텐츠가 없는 월드는 '준비 중'으로 표시 (클릭 불가)
+      if (!hasContent) {
+        const card = document.createElement('div');
+        card.className = 'world-card coming-soon';
+        card.innerHTML = `
+          <div class="world-status">🚧</div>
+          <div class="world-emoji">${world.emoji}</div>
+          <div class="world-name">${this.worldName(worldKey)}</div>
+          <div class="world-progress">${this.t('comingSoon')}</div>
+        `;
+        this.elements.worldGrid.appendChild(card);
+        return;
+      }
+
       const isUnlocked = unlockedWorlds.includes(worldKey);
       const worldProgress = this.progress.worlds[worldKey] || { level1: 0, level2: 0, completed: false };
       const totalProgress = worldProgress.level1 + worldProgress.level2;
@@ -301,9 +360,24 @@ class TOEICGame {
     this.showScreen('levelSelect');
   }
 
-  // 게임 시작
+  // 게임 시작 (월드/레벨 기준으로 문제 구성)
   startGame(level) {
+    const allQuestions = TOEIC_PHRASES[`level${level}`].filter(q => q.world === this.currentWorld);
+    const questionCount = this.settings.debugMode ? 1 : LEVELS[level].questionsPerGame;
+    const questions = this.shuffleArray(allQuestions).slice(0, questionCount);
+    this.beginRound(level, questions, false);
+  }
+
+  // 오답 복습 시작 (직전 라운드에서 틀린 문제만)
+  startReview() {
+    if (!this.reviewQueue || this.reviewQueue.length === 0) return;
+    this.beginRound(this.currentLevel, this.shuffleArray(this.reviewQueue), true);
+  }
+
+  // 한 라운드 시작 (일반/복습 공통)
+  beginRound(level, questions, isReview) {
     this.currentLevel = level;
+    this.isReview = !!isReview;
     this.currentQuestionIndex = 0;
     this.score = 0;
     this.combo = 0;
@@ -311,17 +385,14 @@ class TOEICGame {
     this.correctAnswers = 0;
     this.level2Answers = [];
     this.level2CurrentBlank = 0;
+    this.roundMistakeIds = new Set(); // 이번 라운드에서 틀리거나 건너뛴 문제
 
-    // 문제 준비
-    const allQuestions = TOEIC_PHRASES[`level${level}`].filter(q => q.world === this.currentWorld);
-    const questionCount = this.settings.debugMode ? 1 : LEVELS[level].questionsPerGame;
-
-    // 셔플
-    this.questions = this.shuffleArray(allQuestions).slice(0, questionCount);
+    this.questions = questions;
 
     // UI 초기화
     const world = WORLDS[this.currentWorld];
-    this.elements.gameWorldName.textContent = `${world.emoji} ${this.worldName(this.currentWorld)}`;
+    this.elements.gameWorldName.textContent =
+      `${world.emoji} ${this.worldName(this.currentWorld)}${isReview ? ` · ${this.t('reviewMistakes')}` : ''}`;
     this.elements.gameLevelBadge.textContent = `Level ${level}`;
     this.elements.totalQuestions.textContent = this.questions.length;
     this.elements.currentBest.textContent = this.scores[`level${level}`]?.bestScore || 0;
@@ -338,6 +409,12 @@ class TOEICGame {
     this.showScreen('game');
     this.showQuestion();
     this.updateScoreBoard();
+  }
+
+  // 현재 문제를 오답으로 기록
+  markCurrentMistake() {
+    const q = this.questions[this.currentQuestionIndex];
+    if (q) this.roundMistakeIds.add(q.id);
   }
 
   // 문제 표시
@@ -529,6 +606,7 @@ class TOEICGame {
 
   // 오답 처리
   handleIncorrect() {
+    this.markCurrentMistake();
     this.combo = 0;
     this.elements.comboDisplay.classList.add('hidden');
     this.updateScoreBoard();
@@ -568,6 +646,7 @@ class TOEICGame {
 
   // 스킵
   skipQuestion() {
+    this.markCurrentMistake();
     this.combo = 0;
     this.elements.comboDisplay.classList.add('hidden');
     this.updateScoreBoard();
@@ -589,27 +668,26 @@ class TOEICGame {
   // 게임 완료
   completeGame() {
     const totalQuestions = this.questions.length;
-    const accuracy = Math.round((this.correctAnswers / totalQuestions) * 100);
+    const accuracy = totalQuestions ? Math.round((this.correctAnswers / totalQuestions) * 100) : 0;
 
-    // 점수 저장
-    const levelKey = `level${this.currentLevel}`;
-    if (!this.scores[levelKey]) {
-      this.scores[levelKey] = { bestScore: 0, totalGames: 0, perfectGames: 0 };
+    // 복습 라운드는 점수/진행/해금에 반영하지 않음
+    if (!this.isReview) {
+      const levelKey = `level${this.currentLevel}`;
+      if (!this.scores[levelKey]) {
+        this.scores[levelKey] = { bestScore: 0, totalGames: 0, perfectGames: 0 };
+      }
+      this.scores[levelKey].bestScore = Math.max(this.scores[levelKey].bestScore, this.score);
+      this.scores[levelKey].totalGames++;
+      if (accuracy === 100) this.scores[levelKey].perfectGames++;
+      this.saveScores();
+
+      // 진행 저장
+      if (!this.progress.worlds[this.currentWorld]) {
+        this.progress.worlds[this.currentWorld] = { level1: 0, level2: 0, completed: false };
+      }
+      this.progress.worlds[this.currentWorld][`level${this.currentLevel}`] = totalQuestions;
+      this.saveProgress();
     }
-
-    const isNewBest = this.score > this.scores[levelKey].bestScore;
-    this.scores[levelKey].bestScore = Math.max(this.scores[levelKey].bestScore, this.score);
-    this.scores[levelKey].totalGames++;
-    if (accuracy === 100) this.scores[levelKey].perfectGames++;
-
-    this.saveScores();
-
-    // 진행 저장
-    if (!this.progress.worlds[this.currentWorld]) {
-      this.progress.worlds[this.currentWorld] = { level1: 0, level2: 0, completed: false };
-    }
-    this.progress.worlds[this.currentWorld][`level${this.currentLevel}`] = totalQuestions;
-    this.saveProgress();
 
     // 클리어 화면
     this.elements.finalScore.textContent = this.score;
@@ -624,12 +702,21 @@ class TOEICGame {
     const rank = this.calculateRank(this.score);
     this.elements.rankDisplay.textContent = rank;
 
-    // 다음 월드 버튼
-    const worldKeys = Object.keys(WORLDS);
-    const currentIndex = worldKeys.indexOf(this.currentWorld);
-    if (currentIndex < worldKeys.length - 1) {
+    // 오답 복습 버튼: 이번 라운드에서 틀리거나 건너뛴 문제
+    this.reviewQueue = this.questions.filter(q => this.roundMistakeIds.has(q.id));
+    if (this.reviewQueue.length > 0) {
+      this.elements.reviewMistakesBtn.style.display = 'block';
+      this.elements.reviewMistakesBtn.textContent = `🔁 ${this.t('reviewMistakes')} (${this.reviewQueue.length})`;
+    } else {
+      this.elements.reviewMistakesBtn.style.display = 'none';
+    }
+
+    // 다음 월드 버튼 (복습 라운드에서는 숨김, 플레이 가능한 월드 기준)
+    const playable = this.playableWorlds();
+    const currentIndex = playable.indexOf(this.currentWorld);
+    if (!this.isReview && currentIndex >= 0 && currentIndex < playable.length - 1) {
       this.elements.nextWorldBtn.style.display = 'block';
-      this.nextWorldKey = worldKeys[currentIndex + 1];
+      this.nextWorldKey = playable[currentIndex + 1];
 
       // 다음 월드 해금
       if (!this.progress.unlockedWorlds.includes(this.nextWorldKey)) {
@@ -638,6 +725,7 @@ class TOEICGame {
       }
     } else {
       this.elements.nextWorldBtn.style.display = 'none';
+      this.nextWorldKey = null;
     }
 
     this.showScreen('worldComplete');

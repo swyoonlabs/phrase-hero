@@ -148,6 +148,7 @@
           🥉 Bronze
         </div>
         <div class="complete-buttons">
+          <button class="review-btn" id="reviewMistakesBtn" style="display:none">🔁 오답 복습</button>
           <button class="primary-btn" id="nextWorldBtn" data-i18n="nextWorld">다음 월드 →</button>
           <button class="secondary-btn" id="worldMapBtn" data-i18n="worldMap">월드 맵</button>
         </div>
@@ -227,19 +228,19 @@
       <h2 class="screen-title">ℹ️ <span data-i18n="about">About</span></h2>
 
       <div class="about-content">
-        <h3>🦸 <span data-i18n="aboutTitle">Phrase Hero v1.0</span></h3>
+        <h3>🦸 <span data-i18n="aboutTitle">Phrase Hero</span> <span id="aboutVersion"></span></h3>
 
         <div class="about-stats">
           <div class="about-stat">
-            <span class="about-stat-value">300</span>
+            <span class="about-stat-value" id="aboutStatPhrases">0</span>
             <span class="about-stat-label" data-i18n="statPhrases">숙어 개수</span>
           </div>
           <div class="about-stat">
-            <span class="about-stat-value">5</span>
+            <span class="about-stat-value" id="aboutStatWorlds">0</span>
             <span class="about-stat-label" data-i18n="statWorlds">월드</span>
           </div>
           <div class="about-stat">
-            <span class="about-stat-value">2</span>
+            <span class="about-stat-value" id="aboutStatLevels">0</span>
             <span class="about-stat-label" data-i18n="statLevels">레벨</span>
           </div>
         </div>
