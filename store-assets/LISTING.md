@@ -46,6 +46,8 @@ in YOUR language while the phrase itself stays in English. Pick your language an
 • Level 2 — build the full phrase (verb + preposition) in the right order.
 • After every correct answer, the full sentence translation appears briefly to
   reinforce what you just learned.
+• Review mistakes — missed or skipped questions can be replayed together after a
+  round, so you focus on exactly the phrases you're weak on.
 
 ■ Made to keep you going
 • Themed worlds (Business, Communication, Daily Life, and more) that unlock as you progress.
@@ -74,6 +76,7 @@ Phrase Hero는 TOEIC·회화에서 자주 쓰는 영어 표현(구동사·숙어
 • Level 1 — 문장을 읽고 4개 중 알맞은 동사를 고릅니다.
 • Level 2 — 동사 + 전치사 순서대로 눌러 표현을 완성합니다.
 • 정답을 맞히면 예문 전체 번역이 잠깐 나타나 방금 배운 표현을 각인시켜 줍니다.
+• 오답 복습 — 틀리거나 건너뛴 문제는 완료 후 모아서 다시 풀 수 있어, 약한 표현만 집중 학습됩니다.
 
 ■ 계속하게 만드는 요소
 • 진행하면 열리는 테마 월드(비즈니스·커뮤니케이션·일상생활 등)
