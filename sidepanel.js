@@ -325,7 +325,6 @@ class TOEICGame {
   // 월드 맵 렌더링
   renderWorldMap() {
     const worldKeys = Object.keys(WORLDS);
-    const unlockedWorlds = this.progress.unlockedWorlds || ['business'];
 
     this.elements.worldGrid.innerHTML = '';
 
@@ -346,7 +345,8 @@ class TOEICGame {
         return;
       }
 
-      const isUnlocked = unlockedWorlds.includes(worldKey);
+      // 모든 월드 자유 접근: 콘텐츠가 있는 월드는 항상 열림 (잠금 없음)
+      const isUnlocked = true;
       const worldProgress = this.progress.worlds[worldKey] || { level1: 0, level2: 0, completed: false };
       const totalProgress = worldProgress.level1 + worldProgress.level2;
       const isCompleted = worldProgress.completed;
