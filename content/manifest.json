@@ -21,6 +21,20 @@
       "url": "packs/daily.json",
       "count": 20,
       "contentHash": "a4bc264456280b29ef88741fdf82a993693e5665"
+    },
+    {
+      "world": "learning",
+      "version": 1,
+      "url": "packs/learning.json",
+      "count": 20,
+      "contentHash": "217e2916929386cfb2220659c454d5a0b52685d8"
+    },
+    {
+      "world": "career",
+      "version": 1,
+      "url": "packs/career.json",
+      "count": 20,
+      "contentHash": "9e6dca96dfa786e7ff3b00eb2ca98879fba4ec10"
     }
   ]
 }

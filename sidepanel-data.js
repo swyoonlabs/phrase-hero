@@ -437,6 +437,367 @@ const TOEIC_PHRASES = {
         zh: { translation: "她穿上了外套", hint: "穿上；戴上" },
         en: { translation: "She put on her coat.", hint: "to dress in" }
       }
+    },
+    // === 학습/경력 월드 (자동 생성 + 4개국어 검증) ===
+    {
+      id: 201,
+      phrase: "figure out",
+      verb: "figure",
+      sentence: "I couldn't ___ out the answer.",
+      world: "learning",
+      distractors: [
+        "think",
+        "guess",
+        "read"
+      ],
+      meaning: {
+        ko: { translation: "나는 그 답을 알아낼 수 없었어.", hint: "알아내다" },
+        ja: { translation: "その答えが分からなかった。", hint: "理解する・解き明かす" },
+        zh: { translation: "我想不出答案。", hint: "弄明白；想出" },
+        en: { translation: "I couldn't figure out the answer.", hint: "to understand or solve" }
+      }
+    },
+    {
+      id: 202,
+      phrase: "hand in",
+      verb: "hand",
+      sentence: "Please ___ in your homework.",
+      world: "learning",
+      distractors: [
+        "give",
+        "bring",
+        "send"
+      ],
+      meaning: {
+        ko: { translation: "숙제를 제출해 주세요.", hint: "제출하다" },
+        ja: { translation: "宿題を提出してください。", hint: "提出する" },
+        zh: { translation: "请交上你的作业。", hint: "上交；提交" },
+        en: { translation: "Please hand in your homework.", hint: "to submit" }
+      }
+    },
+    {
+      id: 203,
+      phrase: "look up",
+      verb: "look",
+      sentence: "I'll ___ up the word in the dictionary.",
+      world: "learning",
+      distractors: [
+        "search",
+        "find",
+        "check"
+      ],
+      meaning: {
+        ko: { translation: "사전에서 그 단어를 찾아볼게.", hint: "찾아보다" },
+        ja: { translation: "辞書でその単語を調べるよ。", hint: "調べる" },
+        zh: { translation: "我会在词典里查这个词。", hint: "查找；查阅" },
+        en: { translation: "I'll look up the word in the dictionary.", hint: "to search for information" }
+      }
+    },
+    {
+      id: 204,
+      phrase: "go over",
+      verb: "go",
+      sentence: "Let's ___ over the lesson again.",
+      world: "learning",
+      distractors: [
+        "run",
+        "walk",
+        "pass"
+      ],
+      meaning: {
+        ko: { translation: "그 수업 내용을 다시 살펴보자.", hint: "복습하다" },
+        ja: { translation: "もう一度そのレッスンを見直そう。", hint: "復習する・見直す" },
+        zh: { translation: "我们再复习一遍这节课吧。", hint: "复习；仔细检查" },
+        en: { translation: "Let's go over the lesson again.", hint: "to review carefully" }
+      }
+    },
+    {
+      id: 205,
+      phrase: "point out",
+      verb: "point",
+      sentence: "The teacher will ___ out my mistake.",
+      world: "learning",
+      distractors: [
+        "show",
+        "mark",
+        "tell"
+      ],
+      meaning: {
+        ko: { translation: "선생님이 내 실수를 지적할 거야.", hint: "지적하다" },
+        ja: { translation: "先生が私の間違いを指摘するだろう。", hint: "指摘する" },
+        zh: { translation: "老师会指出我的错误。", hint: "指出" },
+        en: { translation: "The teacher will point out my mistake.", hint: "to indicate or show" }
+      }
+    },
+    {
+      id: 206,
+      phrase: "write down",
+      verb: "write",
+      sentence: "___ down the new words.",
+      world: "learning",
+      distractors: [
+        "spell",
+        "type",
+        "read"
+      ],
+      meaning: {
+        ko: { translation: "새 단어들을 적어라.", hint: "적다" },
+        ja: { translation: "新しい単語を書き留めなさい。", hint: "書き留める" },
+        zh: { translation: "把新单词写下来。", hint: "写下；记下" },
+        en: { translation: "Write down the new words.", hint: "to record in writing" }
+      }
+    },
+    {
+      id: 207,
+      phrase: "sum up",
+      verb: "sum",
+      sentence: "Let me ___ up the main ideas.",
+      world: "learning",
+      distractors: [
+        "add",
+        "count",
+        "wrap"
+      ],
+      meaning: {
+        ko: { translation: "요점을 요약해 볼게.", hint: "요약하다" },
+        ja: { translation: "要点をまとめてみるよ。", hint: "要約する" },
+        zh: { translation: "让我总结一下主要观点。", hint: "总结；概括" },
+        en: { translation: "Let me sum up the main ideas.", hint: "to summarize briefly" }
+      }
+    },
+    {
+      id: 208,
+      phrase: "catch on",
+      verb: "catch",
+      sentence: "She'll ___ on quickly in class.",
+      world: "learning",
+      distractors: [
+        "learn",
+        "get",
+        "pick"
+      ],
+      meaning: {
+        ko: { translation: "그녀는 수업에서 빨리 이해할 거야.", hint: "이해하다" },
+        ja: { translation: "彼女は授業ですぐに理解するだろう。", hint: "理解する・のみ込む" },
+        zh: { translation: "她在课上会很快学会。", hint: "领会；学会" },
+        en: { translation: "She'll catch on quickly in class.", hint: "to understand or learn" }
+      }
+    },
+    {
+      id: 209,
+      phrase: "hand out",
+      verb: "hand",
+      sentence: "The teacher will ___ out the test papers.",
+      world: "learning",
+      distractors: [
+        "throw",
+        "take",
+        "cross"
+      ],
+      meaning: {
+        ko: { translation: "선생님이 시험지를 나눠줄 거야.", hint: "나눠주다" },
+        ja: { translation: "先生が試験用紙を配るだろう。", hint: "配る" },
+        zh: { translation: "老师会分发试卷。", hint: "分发" },
+        en: { translation: "The teacher will hand out the test papers.", hint: "to distribute" }
+      }
+    },
+    {
+      id: 210,
+      phrase: "think over",
+      verb: "think",
+      sentence: "___ over the question before answering.",
+      world: "learning",
+      distractors: [
+        "look",
+        "read",
+        "talk"
+      ],
+      meaning: {
+        ko: { translation: "답하기 전에 그 질문을 곰곰이 생각해 봐.", hint: "곰곰이 생각하다" },
+        ja: { translation: "答える前にその質問をよく考えて。", hint: "よく考える" },
+        zh: { translation: "回答前仔细考虑这个问题。", hint: "仔细考虑" },
+        en: { translation: "Think over the question before answering.", hint: "to consider carefully" }
+      }
+    },
+    {
+      id: 211,
+      phrase: "give up",
+      verb: "give",
+      sentence: "Don't ___ up so easily at work.",
+      world: "career",
+      distractors: [
+        "let",
+        "throw",
+        "hold"
+      ],
+      meaning: {
+        ko: { translation: "직장에서 그렇게 쉽게 포기하지 마.", hint: "포기하다" },
+        ja: { translation: "仕事でそんなに簡単にあきらめないで。", hint: "あきらめる" },
+        zh: { translation: "别在工作上那么轻易放弃。", hint: "放弃" },
+        en: { translation: "Don't give up so easily at work.", hint: "to stop trying" }
+      }
+    },
+    {
+      id: 212,
+      phrase: "turn down",
+      verb: "turn",
+      sentence: "She had to ___ down the job offer.",
+      world: "career",
+      distractors: [
+        "put",
+        "take",
+        "cut"
+      ],
+      meaning: {
+        ko: { translation: "그녀는 그 일자리 제안을 거절해야 했다.", hint: "거절하다" },
+        ja: { translation: "彼女はその仕事のオファーを断らなければならなかった。", hint: "断る" },
+        zh: { translation: "她不得不拒绝那份工作邀请。", hint: "拒绝" },
+        en: { translation: "She had to turn down the job offer.", hint: "to reject an offer" }
+      }
+    },
+    {
+      id: 213,
+      phrase: "work on",
+      verb: "work",
+      sentence: "I need to ___ on my resume.",
+      world: "career",
+      distractors: [
+        "do",
+        "make",
+        "run"
+      ],
+      meaning: {
+        ko: { translation: "나는 이력서를 손봐야 해.", hint: "공들여 작업하다" },
+        ja: { translation: "履歴書に取り組む必要がある。", hint: "取り組む" },
+        zh: { translation: "我得好好改改我的简历。", hint: "着手改进" },
+        en: { translation: "I need to work on my resume.", hint: "to spend effort improving" }
+      }
+    },
+    {
+      id: 214,
+      phrase: "take over",
+      verb: "take",
+      sentence: "He will ___ over the project soon.",
+      world: "career",
+      distractors: [
+        "get",
+        "hold",
+        "bring"
+      ],
+      meaning: {
+        ko: { translation: "그가 곧 그 프로젝트를 넘겨받을 거야.", hint: "인수하다, 넘겨받다" },
+        ja: { translation: "彼はまもなくそのプロジェクトを引き継ぐ。", hint: "引き継ぐ" },
+        zh: { translation: "他很快就会接手这个项目。", hint: "接管；接手" },
+        en: { translation: "He will take over the project soon.", hint: "to take control of" }
+      }
+    },
+    {
+      id: 215,
+      phrase: "fill in",
+      verb: "fill",
+      sentence: "Can you ___ in for me today?",
+      world: "career",
+      distractors: [
+        "cover",
+        "help",
+        "work"
+      ],
+      meaning: {
+        ko: { translation: "오늘 나 대신 일해 줄 수 있어?", hint: "대신하다" },
+        ja: { translation: "今日、私の代わりをしてくれる?", hint: "代わりを務める" },
+        zh: { translation: "今天你能替我顶班吗?", hint: "代替；顶替" },
+        en: { translation: "Can you fill in for me today?", hint: "to substitute for someone" }
+      }
+    },
+    {
+      id: 216,
+      phrase: "move up",
+      verb: "move",
+      sentence: "She hopes to ___ up in the company.",
+      world: "career",
+      distractors: [
+        "go",
+        "step",
+        "get"
+      ],
+      meaning: {
+        ko: { translation: "그녀는 회사에서 승진하기를 바란다.", hint: "승진하다, 올라가다" },
+        ja: { translation: "彼女は会社で昇進したいと思っている。", hint: "昇進する" },
+        zh: { translation: "她希望在公司里得到晋升。", hint: "晋升；上升" },
+        en: { translation: "She hopes to move up in the company.", hint: "to advance in rank" }
+      }
+    },
+    {
+      id: 217,
+      phrase: "step down",
+      verb: "step",
+      sentence: "The CEO will ___ down next month.",
+      world: "career",
+      distractors: [
+        "get",
+        "back",
+        "move"
+      ],
+      meaning: {
+        ko: { translation: "그 CEO는 다음 달에 물러날 것이다.", hint: "사임하다, 물러나다" },
+        ja: { translation: "そのCEOは来月退任する。", hint: "退任する" },
+        zh: { translation: "这位首席执行官下个月将卸任。", hint: "辞职；卸任" },
+        en: { translation: "The CEO will step down next month.", hint: "to resign from a position" }
+      }
+    },
+    {
+      id: 218,
+      phrase: "sign up",
+      verb: "sign",
+      sentence: "I want to ___ up for the training.",
+      world: "career",
+      distractors: [
+        "set",
+        "join",
+        "put"
+      ],
+      meaning: {
+        ko: { translation: "나는 그 교육에 등록하고 싶어.", hint: "등록하다, 신청하다" },
+        ja: { translation: "その研修に申し込みたい。", hint: "申し込む" },
+        zh: { translation: "我想报名参加这个培训。", hint: "报名；注册" },
+        en: { translation: "I want to sign up for the training.", hint: "to enroll or register" }
+      }
+    },
+    {
+      id: 219,
+      phrase: "back up",
+      verb: "back",
+      sentence: "Please ___ up your files before you leave.",
+      world: "career",
+      distractors: [
+        "save",
+        "copy",
+        "keep"
+      ],
+      meaning: {
+        ko: { translation: "퇴근하기 전에 파일을 백업해 주세요.", hint: "백업하다" },
+        ja: { translation: "帰る前にファイルをバックアップしてください。", hint: "バックアップする" },
+        zh: { translation: "下班前请备份好你的文件。", hint: "备份" },
+        en: { translation: "Please back up your files before you leave.", hint: "to make a copy for safety" }
+      }
+    },
+    {
+      id: 220,
+      phrase: "follow up",
+      verb: "follow",
+      sentence: "I'll ___ up on the interview.",
+      world: "career",
+      distractors: [
+        "check",
+        "catch",
+        "keep"
+      ],
+      meaning: {
+        ko: { translation: "면접 건에 대해 후속 조치를 할게요.", hint: "후속 조치를 하다" },
+        ja: { translation: "面接の件についてフォローアップします。", hint: "追って対応する" },
+        zh: { translation: "我会跟进面试的事。", hint: "跟进；后续处理" },
+        en: { translation: "I'll follow up on the interview.", hint: "to take further action" }
+      }
     }
   ],
 
@@ -893,6 +1254,387 @@ const TOEIC_PHRASES = {
         ja: { translation: "私の手を離して", hint: "手放す；離す" },
         zh: { translation: "放开我的手", hint: "放开；松手" },
         en: { translation: "Let go of my hand.", hint: "to release" }
+      }
+    },
+    // === 학습/경력 월드 (자동 생성 + 4개국어 검증) ===
+    {
+      id: 301,
+      phrase: "read up on",
+      verb: "read",
+      preposition: "up on",
+      sentence: "Before the exam, I should ___ ___ ancient history.",
+      world: "learning",
+      distractors: [
+        "on",
+        "for",
+        "at"
+      ],
+      meaning: {
+        ko: { translation: "시험 전에 고대사를 공부해 두어야 한다.", hint: "~에 대해 미리 공부하다" },
+        ja: { translation: "試験の前に古代史を勉強しておくべきだ。", hint: "詳しく調べて学ぶ" },
+        zh: { translation: "考试前我应该研读一下古代史。", hint: "钻研；仔细阅读" },
+        en: { translation: "Before the exam, I should read up on ancient history.", hint: "to study a subject" }
+      }
+    },
+    {
+      id: 302,
+      phrase: "move on to",
+      verb: "move",
+      preposition: "on to",
+      sentence: "Once you finish this chapter, ___ ___ the next one.",
+      world: "learning",
+      distractors: [
+        "over",
+        "into",
+        "onto"
+      ],
+      meaning: {
+        ko: { translation: "이 장을 끝내면 다음 장으로 넘어가라.", hint: "다음 것으로 넘어가다" },
+        ja: { translation: "この章を終えたら次の章に進みなさい。", hint: "次へ進む" },
+        zh: { translation: "读完这一章后，就接着看下一章。", hint: "转到下一个" },
+        en: { translation: "Once you finish this chapter, move on to the next one.", hint: "to start the next thing" }
+      }
+    },
+    {
+      id: 303,
+      phrase: "break down into",
+      verb: "break",
+      preposition: "down into",
+      sentence: "This theory can ___ ___ three main ideas.",
+      world: "learning",
+      distractors: [
+        "up into",
+        "off into",
+        "out into"
+      ],
+      meaning: {
+        ko: { translation: "이 이론은 세 가지 핵심 개념으로 나눌 수 있다.", hint: "~으로 나누다/분해하다" },
+        ja: { translation: "この理論は三つの主要な考えに分けられる。", hint: "細かく分ける" },
+        zh: { translation: "这个理论可以分解成三个主要观点。", hint: "分解为；细分成" },
+        en: { translation: "This theory can break down into three main ideas.", hint: "to divide into parts" }
+      }
+    },
+    {
+      id: 304,
+      phrase: "catch up on",
+      verb: "catch",
+      preposition: "up on",
+      sentence: "I have to ___ ___ my reading this weekend.",
+      world: "learning",
+      distractors: [
+        "to",
+        "with",
+        "for"
+      ],
+      meaning: {
+        ko: { translation: "이번 주말에 밀린 독서를 따라잡아야 한다.", hint: "밀린 것을 만회하다" },
+        ja: { translation: "今週末に遅れている読書に追いつかなければならない。", hint: "遅れを取り戻す" },
+        zh: { translation: "这个周末我得补上落下的阅读。", hint: "补上；赶上进度" },
+        en: { translation: "I have to catch up on my reading this weekend.", hint: "to do something you missed" }
+      }
+    },
+    {
+      id: 305,
+      phrase: "look back on",
+      verb: "look",
+      preposition: "back on",
+      sentence: "Someday you'll ___ ___ your school years fondly.",
+      world: "learning",
+      distractors: [
+        "at",
+        "to",
+        "upon"
+      ],
+      meaning: {
+        ko: { translation: "언젠가 학창 시절을 흐뭇하게 돌아보게 될 것이다.", hint: "과거를 회상하다" },
+        ja: { translation: "いつか学生時代を懐かしく振り返るだろう。", hint: "過去を振り返る" },
+        zh: { translation: "有一天你会满怀深情地回顾学生时代。", hint: "回顾；回想过去" },
+        en: { translation: "Someday you'll look back on your school years fondly.", hint: "to remember the past" }
+      }
+    },
+    {
+      id: 306,
+      phrase: "zero in on",
+      verb: "zero",
+      preposition: "in on",
+      sentence: "The researcher tried to ___ ___ the key cause.",
+      world: "learning",
+      distractors: [
+        "at",
+        "to",
+        "into"
+      ],
+      meaning: {
+        ko: { translation: "연구자는 핵심 원인에 집중하려 했다.", hint: "~에 초점을 맞추다" },
+        ja: { translation: "研究者は主な原因に的を絞ろうとした。", hint: "焦点を絞る" },
+        zh: { translation: "研究者试图锁定关键原因。", hint: "聚焦；锁定" },
+        en: { translation: "The researcher tried to zero in on the key cause.", hint: "to focus on something" }
+      }
+    },
+    {
+      id: 307,
+      phrase: "sign up for",
+      verb: "sign",
+      preposition: "up for",
+      sentence: "Many students ___ ___ the online course.",
+      world: "learning",
+      distractors: [
+        "to",
+        "on",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "많은 학생들이 그 온라인 강좌에 등록한다.", hint: "~에 신청/등록하다" },
+        ja: { translation: "多くの学生がそのオンライン講座に申し込む。", hint: "申し込む；登録する" },
+        zh: { translation: "许多学生报名参加了这门网课。", hint: "报名；注册" },
+        en: { translation: "Many students sign up for the online course.", hint: "to enroll in something" }
+      }
+    },
+    {
+      id: 308,
+      phrase: "come up with",
+      verb: "come",
+      preposition: "up with",
+      sentence: "She managed to ___ ___ a clever answer.",
+      world: "learning",
+      distractors: [
+        "to",
+        "for",
+        "on"
+      ],
+      meaning: {
+        ko: { translation: "그녀는 기발한 답을 생각해 냈다.", hint: "아이디어를 생각해 내다" },
+        ja: { translation: "彼女は巧妙な答えを思いついた。", hint: "考え出す；思いつく" },
+        zh: { translation: "她想出了一个巧妙的答案。", hint: "想出；提出" },
+        en: { translation: "She managed to come up with a clever answer.", hint: "to think of an idea" }
+      }
+    },
+    {
+      id: 309,
+      phrase: "get around to",
+      verb: "get",
+      preposition: "around to",
+      sentence: "I still need to ___ ___ reading that textbook.",
+      world: "learning",
+      distractors: [
+        "at",
+        "for",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "나는 아직 그 교과서를 읽는 일에 손을 대야 한다.", hint: "미루던 일을 마침내 하다" },
+        ja: { translation: "私はまだあの教科書を読むことに取りかからなければならない。", hint: "やっと取りかかる" },
+        zh: { translation: "我还得抽空去读那本教科书。", hint: "抽空去做；终于着手" },
+        en: { translation: "I still need to get around to reading that textbook.", hint: "to finally do something" }
+      }
+    },
+    {
+      id: 311,
+      phrase: "carry over to",
+      verb: "carry",
+      preposition: "over to",
+      sentence: "Unused vacation days ___ ___ the next year.",
+      world: "career",
+      distractors: [
+        "on",
+        "off",
+        "into"
+      ],
+      meaning: {
+        ko: { translation: "쓰지 않은 휴가는 다음 해로 이월된다.", hint: "다음으로 이월되다" },
+        ja: { translation: "使わなかった有給は翌年に繰り越される。", hint: "繰り越す" },
+        zh: { translation: "没用完的假期会顺延到下一年。", hint: "结转；顺延" },
+        en: { translation: "Unused vacation days carry over to the next year.", hint: "to transfer to a later period" }
+      }
+    },
+    {
+      id: 312,
+      phrase: "fall behind in",
+      verb: "fall",
+      preposition: "behind in",
+      sentence: "He started to ___ ___ his work after the merger.",
+      world: "career",
+      distractors: [
+        "back on",
+        "short of",
+        "in with"
+      ],
+      meaning: {
+        ko: { translation: "합병 후 그는 업무가 밀리기 시작했다.", hint: "뒤처지다" },
+        ja: { translation: "合併後、彼は仕事が遅れ始めた。", hint: "遅れをとる" },
+        zh: { translation: "合并后他的工作开始落后了。", hint: "落后；跟不上" },
+        en: { translation: "He started to fall behind in his work after the merger.", hint: "to fail to keep pace" }
+      }
+    },
+    {
+      id: 313,
+      phrase: "live up to",
+      verb: "live",
+      preposition: "up to",
+      sentence: "The new manager failed to ___ ___ our expectations.",
+      world: "career",
+      distractors: [
+        "on",
+        "for",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "새 매니저는 우리의 기대에 부응하지 못했다.", hint: "기대에 부응하다" },
+        ja: { translation: "新しいマネージャーは私たちの期待に応えられなかった。", hint: "期待に応える" },
+        zh: { translation: "新经理没能达到我们的期望。", hint: "不负所望；达到标准" },
+        en: { translation: "The new manager failed to live up to our expectations.", hint: "to meet expectations" }
+      }
+    },
+    {
+      id: 314,
+      phrase: "miss out on",
+      verb: "miss",
+      preposition: "out on",
+      sentence: "Don't ___ ___ the chance for promotion.",
+      world: "career",
+      distractors: [
+        "on",
+        "of",
+        "for"
+      ],
+      meaning: {
+        ko: { translation: "승진 기회를 놓치지 마라.", hint: "기회를 놓치다" },
+        ja: { translation: "昇進のチャンスを逃さないで。", hint: "逃す" },
+        zh: { translation: "别错过升职的机会。", hint: "错过（机会）" },
+        en: { translation: "Don't miss out on the chance for promotion.", hint: "to lose an opportunity" }
+      }
+    },
+    {
+      id: 315,
+      phrase: "hand over to",
+      verb: "hand",
+      preposition: "over to",
+      sentence: "Before retiring, she will ___ ___ her successor.",
+      world: "career",
+      distractors: [
+        "on",
+        "off",
+        "up"
+      ],
+      meaning: {
+        ko: { translation: "은퇴하기 전에 그녀는 후임자에게 인계할 것이다.", hint: "(일을) 넘겨주다" },
+        ja: { translation: "退職前に彼女は後任に引き継ぐ。", hint: "引き継ぐ" },
+        zh: { translation: "退休前她会把工作移交给继任者。", hint: "移交；交接" },
+        en: { translation: "Before retiring, she will hand over to her successor.", hint: "to transfer responsibility" }
+      }
+    },
+    {
+      id: 316,
+      phrase: "look forward to",
+      verb: "look",
+      preposition: "forward to",
+      sentence: "We ___ ___ working with you.",
+      world: "career",
+      distractors: [
+        "on",
+        "for",
+        "at"
+      ],
+      meaning: {
+        ko: { translation: "함께 일하기를 고대합니다.", hint: "기대하다; 고대하다" },
+        ja: { translation: "一緒に働けるのを楽しみにしています。", hint: "楽しみにする" },
+        zh: { translation: "我们期待与您合作。", hint: "期待；盼望" },
+        en: { translation: "We look forward to working with you.", hint: "to anticipate eagerly" }
+      }
+    },
+    {
+      id: 317,
+      phrase: "get ahead of",
+      verb: "get",
+      preposition: "ahead of",
+      sentence: "Working late helps me ___ ___ the competition.",
+      world: "career",
+      distractors: [
+        "on",
+        "in",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "야근은 경쟁자들보다 앞서 나가는 데 도움이 된다.", hint: "~보다 앞서다" },
+        ja: { translation: "残業は競合より先んじるのに役立つ。", hint: "先んじる" },
+        zh: { translation: "加班有助于我领先于竞争对手。", hint: "领先；抢先" },
+        en: { translation: "Working late helps me get ahead of the competition.", hint: "to move in front of" }
+      }
+    },
+    {
+      id: 318,
+      phrase: "fill in for",
+      verb: "fill",
+      preposition: "in for",
+      sentence: "Can you ___ ___ me while I'm on leave?",
+      world: "career",
+      distractors: [
+        "on",
+        "out",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "내가 휴가 간 동안 나 대신 일해줄 수 있어?", hint: "~를 대신하다" },
+        ja: { translation: "休暇の間、私の代わりをしてくれる？", hint: "代役を務める" },
+        zh: { translation: "我休假时你能替我顶班吗？", hint: "顶替；代班" },
+        en: { translation: "Can you fill in for me while I'm on leave?", hint: "to substitute for someone" }
+      }
+    },
+    {
+      id: 319,
+      phrase: "stand up for",
+      verb: "stand",
+      preposition: "up for",
+      sentence: "A good boss will ___ ___ their team.",
+      world: "career",
+      distractors: [
+        "on",
+        "to",
+        "with"
+      ],
+      meaning: {
+        ko: { translation: "좋은 상사는 자기 팀을 옹호한다.", hint: "옹호하다; 편들다" },
+        ja: { translation: "良い上司は自分のチームをかばう。", hint: "擁護する" },
+        zh: { translation: "好的上司会为自己的团队挺身而出。", hint: "支持；维护" },
+        en: { translation: "A good boss will stand up for their team.", hint: "to defend or support" }
+      }
+    },
+    {
+      id: 320,
+      phrase: "follow up on",
+      verb: "follow",
+      preposition: "up on",
+      sentence: "Please ___ ___ the client's request today.",
+      world: "career",
+      distractors: [
+        "on",
+        "with",
+        "for"
+      ],
+      meaning: {
+        ko: { translation: "오늘 고객의 요청을 후속 처리해 주세요.", hint: "후속 조치를 하다" },
+        ja: { translation: "今日、顧客の要望にフォローアップしてください。", hint: "追って対応する" },
+        zh: { translation: "请今天跟进客户的请求。", hint: "跟进；后续处理" },
+        en: { translation: "Please follow up on the client's request today.", hint: "to take further action" }
+      }
+    },
+    {
+      id: 310,
+      phrase: "sit in on",
+      verb: "sit",
+      preposition: "in on",
+      sentence: "Before enrolling, I asked whether I could ___ ___ one of the professor's lectures.",
+      world: "learning",
+      distractors: [
+        "up to",
+        "over to",
+        "out of"
+      ],
+      meaning: {
+        ko: { translation: "정식 등록을 하기 전에, 저는 교수님의 강의 중 하나를 청강해도 되는지 여쭤봤어요.", hint: "수업이나 회의에 참관하다, 청강하다" },
+        ja: { translation: "正式に履修登録する前に、教授の講義の一つを聴講してもいいか尋ねました。", hint: "授業や会議に参加して見学・聴講する" },
+        zh: { translation: "在正式注册之前，我问了是否可以旁听教授的一节课。", hint: "旁听（课程或会议）" },
+        en: { translation: "Before enrolling, I asked whether I could sit in on one of the professor's lectures.", hint: "to attend a class or meeting as an observer" }
       }
     }
   ]
