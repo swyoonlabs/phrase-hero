@@ -134,6 +134,11 @@ body {
   display: none;
 }
 
+/* 전역 숨김 유틸 (레벨 컨테이너·콤보 등 .screen이 아닌 요소에도 적용) */
+.hidden {
+  display: none !important;
+}
+
 .screen-title {
   font-size: 22px;
   color: var(--text);
