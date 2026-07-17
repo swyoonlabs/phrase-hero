@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "world": "business",
+      "version": 1,
+      "url": "packs/business.json",
+      "count": 20,
+      "contentHash": "432fd9ea0ece54d84fc3b6fc46e383885f0fb528"
+    },
+    {
+      "world": "communication",
+      "version": 1,
+      "url": "packs/communication.json",
+      "count": 20,
+      "contentHash": "90b88ce7c79314fc975a67a336c19cd71e38f947"
+    },
+    {
+      "world": "daily",
+      "version": 1,
+      "url": "packs/daily.json",
+      "count": 20,
+      "contentHash": "a4bc264456280b29ef88741fdf82a993693e5665"
+    }
+  ]
+}

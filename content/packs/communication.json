@@ -1,0 +1,618 @@
+{
+  "world": "communication",
+  "version": 1,
+  "level1": [
+    {
+      "id": 11,
+      "phrase": "agree with",
+      "verb": "agree",
+      "sentence": "I ___ with your opinion.",
+      "world": "communication",
+      "distractors": [
+        "concur",
+        "accept",
+        "approve"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나는 당신 의견에 동의한다",
+          "hint": "동의하다"
+        },
+        "ja": {
+          "translation": "私はあなたの意見に同意する",
+          "hint": "同意する"
+        },
+        "zh": {
+          "translation": "我同意你的意见",
+          "hint": "同意"
+        },
+        "en": {
+          "translation": "I agree with your opinion.",
+          "hint": "to have the same view"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "phrase": "argue with",
+      "verb": "argue",
+      "sentence": "Don't ___ with him.",
+      "world": "communication",
+      "distractors": [
+        "fight",
+        "quarrel",
+        "dispute"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그와 논쟁하지 마라",
+          "hint": "논쟁하다"
+        },
+        "ja": {
+          "translation": "彼と言い争うな",
+          "hint": "口論する"
+        },
+        "zh": {
+          "translation": "别跟他争论",
+          "hint": "争论；争吵"
+        },
+        "en": {
+          "translation": "Don't argue with him.",
+          "hint": "to disagree in words"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "phrase": "ask for",
+      "verb": "ask",
+      "sentence": "He ___ for a raise.",
+      "world": "communication",
+      "distractors": [
+        "request",
+        "demand",
+        "seek"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 임금 인상을 요청했다",
+          "hint": "요청하다"
+        },
+        "ja": {
+          "translation": "彼は昇給を求めた",
+          "hint": "求める"
+        },
+        "zh": {
+          "translation": "他要求加薪",
+          "hint": "请求；要求"
+        },
+        "en": {
+          "translation": "He asked for a raise.",
+          "hint": "to request"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "phrase": "end up",
+      "verb": "end",
+      "sentence": "We ___ up being friends.",
+      "world": "communication",
+      "distractors": [
+        "become",
+        "finish",
+        "conclude"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "우리는 결국 친구가 되었다",
+          "hint": "결국 ~이 되다"
+        },
+        "ja": {
+          "translation": "私たちは結局友達になった",
+          "hint": "結局～になる"
+        },
+        "zh": {
+          "translation": "我们最终成了朋友",
+          "hint": "最终变成；结果"
+        },
+        "en": {
+          "translation": "We ended up being friends.",
+          "hint": "to finally become"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "phrase": "get along",
+      "verb": "get",
+      "sentence": "They ___ well together.",
+      "world": "communication",
+      "distractors": [
+        "cooperate",
+        "relate",
+        "bond"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 잘 지낸다",
+          "hint": "사이좋게 지내다"
+        },
+        "ja": {
+          "translation": "彼らは仲良くやっている",
+          "hint": "仲良くする"
+        },
+        "zh": {
+          "translation": "他们相处得很好",
+          "hint": "相处融洽"
+        },
+        "en": {
+          "translation": "They get along well together.",
+          "hint": "to have a good relationship"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "phrase": "hang up",
+      "verb": "hang",
+      "sentence": "She ___ up on me.",
+      "world": "communication",
+      "distractors": [
+        "disconnect",
+        "cut",
+        "terminate"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그녀는 나에게 전화를 끊었다",
+          "hint": "전화를 끊다"
+        },
+        "ja": {
+          "translation": "彼女は私との電話を切った",
+          "hint": "電話を切る"
+        },
+        "zh": {
+          "translation": "她挂断了我的电话",
+          "hint": "挂断电话"
+        },
+        "en": {
+          "translation": "She hung up on me.",
+          "hint": "to end a phone call"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "phrase": "keep on",
+      "verb": "keep",
+      "sentence": "He ___ on working.",
+      "world": "communication",
+      "distractors": [
+        "continue",
+        "persist",
+        "maintain"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 계속 일한다",
+          "hint": "계속하다"
+        },
+        "ja": {
+          "translation": "彼は働き続ける",
+          "hint": "～し続ける"
+        },
+        "zh": {
+          "translation": "他继续工作",
+          "hint": "继续"
+        },
+        "en": {
+          "translation": "He keeps on working.",
+          "hint": "to continue"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "phrase": "laugh at",
+      "verb": "laugh",
+      "sentence": "Don't ___ at him.",
+      "world": "communication",
+      "distractors": [
+        "mock",
+        "ridicule",
+        "tease"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그를 비웃지 마라",
+          "hint": "비웃다"
+        },
+        "ja": {
+          "translation": "彼を笑うな",
+          "hint": "あざ笑う"
+        },
+        "zh": {
+          "translation": "别嘲笑他",
+          "hint": "嘲笑"
+        },
+        "en": {
+          "translation": "Don't laugh at him.",
+          "hint": "to mock"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "phrase": "make up",
+      "verb": "make",
+      "sentence": "They ___ up quickly.",
+      "world": "communication",
+      "distractors": [
+        "reconcile",
+        "resolve",
+        "settle"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 금방 화해했다",
+          "hint": "화해하다"
+        },
+        "ja": {
+          "translation": "彼らはすぐに仲直りした",
+          "hint": "仲直りする"
+        },
+        "zh": {
+          "translation": "他们很快就和好了",
+          "hint": "和解；和好"
+        },
+        "en": {
+          "translation": "They made up quickly.",
+          "hint": "to reconcile"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "phrase": "show up",
+      "verb": "show",
+      "sentence": "He didn't ___ to the party.",
+      "world": "communication",
+      "distractors": [
+        "appear",
+        "arrive",
+        "attend"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 파티에 나타나지 않았다",
+          "hint": "나타나다"
+        },
+        "ja": {
+          "translation": "彼はパーティーに現れなかった",
+          "hint": "現れる"
+        },
+        "zh": {
+          "translation": "他没有来参加派对",
+          "hint": "出现；露面"
+        },
+        "en": {
+          "translation": "He didn't show up to the party.",
+          "hint": "to appear"
+        }
+      }
+    }
+  ],
+  "level2": [
+    {
+      "id": 111,
+      "phrase": "fall back on",
+      "verb": "fall",
+      "preposition": "back on",
+      "sentence": "I can ___ ___ my friends.",
+      "world": "communication",
+      "distractors": [
+        "on",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "친구들에게 의지할 수 있다",
+          "hint": "의지하다"
+        },
+        "ja": {
+          "translation": "友人に頼ることができる",
+          "hint": "頼る；当てにする"
+        },
+        "zh": {
+          "translation": "我可以依靠我的朋友",
+          "hint": "依靠；求助于"
+        },
+        "en": {
+          "translation": "I can fall back on my friends.",
+          "hint": "to rely on"
+        }
+      }
+    },
+    {
+      "id": 112,
+      "phrase": "get along with",
+      "verb": "get",
+      "preposition": "along with",
+      "sentence": "I ___ ___ my coworkers.",
+      "world": "communication",
+      "distractors": [
+        "with",
+        "to",
+        "for"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "동료들과 잘 지낸다",
+          "hint": "사이좋게 지내다"
+        },
+        "ja": {
+          "translation": "同僚とうまくやっている",
+          "hint": "仲良くやる"
+        },
+        "zh": {
+          "translation": "我和同事相处融洽",
+          "hint": "相处融洽"
+        },
+        "en": {
+          "translation": "I get along with my coworkers.",
+          "hint": "to have a good relationship with"
+        }
+      }
+    },
+    {
+      "id": 113,
+      "phrase": "get back to",
+      "verb": "get",
+      "preposition": "back to",
+      "sentence": "I'll ___ ___ you soon.",
+      "world": "communication",
+      "distractors": [
+        "to",
+        "for",
+        "with"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "곧 연락드리겠습니다",
+          "hint": "답신하다/회신하다"
+        },
+        "ja": {
+          "translation": "すぐに折り返しご連絡します",
+          "hint": "折り返し連絡する"
+        },
+        "zh": {
+          "translation": "我很快回复你",
+          "hint": "回复；再联系"
+        },
+        "en": {
+          "translation": "I'll get back to you soon.",
+          "hint": "to reply later"
+        }
+      }
+    },
+    {
+      "id": 114,
+      "phrase": "get rid of",
+      "verb": "get",
+      "preposition": "rid of",
+      "sentence": "We must ___ ___ this problem.",
+      "world": "communication",
+      "distractors": [
+        "of",
+        "for",
+        "from"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "이 문제를 없애야 한다",
+          "hint": "제거하다/없애다"
+        },
+        "ja": {
+          "translation": "この問題を取り除かねばならない",
+          "hint": "取り除く"
+        },
+        "zh": {
+          "translation": "我们必须解决这个问题",
+          "hint": "摆脱；除掉"
+        },
+        "en": {
+          "translation": "We must get rid of this problem.",
+          "hint": "to remove"
+        }
+      }
+    },
+    {
+      "id": 115,
+      "phrase": "get through with",
+      "verb": "get",
+      "preposition": "through with",
+      "sentence": "I ___ ___ the report.",
+      "world": "communication",
+      "distractors": [
+        "with",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "보고서를 완료했다",
+          "hint": "완료하다/끝내다"
+        },
+        "ja": {
+          "translation": "レポートを終わらせた",
+          "hint": "終える；済ませる"
+        },
+        "zh": {
+          "translation": "我完成了报告",
+          "hint": "完成；结束"
+        },
+        "en": {
+          "translation": "I got through with the report.",
+          "hint": "to finish"
+        }
+      }
+    },
+    {
+      "id": 116,
+      "phrase": "give up on",
+      "verb": "give",
+      "preposition": "up on",
+      "sentence": "Don't ___ ___ him.",
+      "world": "communication",
+      "distractors": [
+        "on",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그를 포기하지 마라",
+          "hint": "포기하다"
+        },
+        "ja": {
+          "translation": "彼を見放すな",
+          "hint": "見切りをつける"
+        },
+        "zh": {
+          "translation": "别放弃他",
+          "hint": "放弃（对…的期望）"
+        },
+        "en": {
+          "translation": "Don't give up on him.",
+          "hint": "to stop hoping for"
+        }
+      }
+    },
+    {
+      "id": 117,
+      "phrase": "go back on",
+      "verb": "go",
+      "preposition": "back on",
+      "sentence": "He ___ ___ his word.",
+      "world": "communication",
+      "distractors": [
+        "on",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 약속을 어겼다",
+          "hint": "약속을 어기다"
+        },
+        "ja": {
+          "translation": "彼は約束を破った",
+          "hint": "約束を破る"
+        },
+        "zh": {
+          "translation": "他违背了自己的诺言",
+          "hint": "违背；反悔"
+        },
+        "en": {
+          "translation": "He went back on his word.",
+          "hint": "to break a promise"
+        }
+      }
+    },
+    {
+      "id": 118,
+      "phrase": "go on with",
+      "verb": "go",
+      "preposition": "on with",
+      "sentence": "Please ___ ___ your work.",
+      "world": "communication",
+      "distractors": [
+        "with",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "계속 일하세요",
+          "hint": "계속하다"
+        },
+        "ja": {
+          "translation": "仕事を続けてください",
+          "hint": "続ける"
+        },
+        "zh": {
+          "translation": "请继续你的工作",
+          "hint": "继续"
+        },
+        "en": {
+          "translation": "Please go on with your work.",
+          "hint": "to continue"
+        }
+      }
+    },
+    {
+      "id": 119,
+      "phrase": "hold on to",
+      "verb": "hold",
+      "preposition": "on to",
+      "sentence": "___ ___ the rail.",
+      "world": "communication",
+      "distractors": [
+        "to",
+        "for",
+        "with"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "난간을 잡으세요",
+          "hint": "잡고 있다/놓지 않다"
+        },
+        "ja": {
+          "translation": "手すりにつかまってください",
+          "hint": "しっかりつかむ"
+        },
+        "zh": {
+          "translation": "抓住扶手",
+          "hint": "抓紧；不放开"
+        },
+        "en": {
+          "translation": "Hold on to the rail.",
+          "hint": "to grip firmly"
+        }
+      }
+    },
+    {
+      "id": 120,
+      "phrase": "keep up with",
+      "verb": "keep",
+      "preposition": "up with",
+      "sentence": "Can you ___ ___ technology?",
+      "world": "communication",
+      "distractors": [
+        "with",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "기술 발전을 따라갈 수 있나?",
+          "hint": "따라가다/쫓아가다"
+        },
+        "ja": {
+          "translation": "技術の進歩についていけるか？",
+          "hint": "ついていく"
+        },
+        "zh": {
+          "translation": "你能跟上技术发展吗？",
+          "hint": "跟上；紧跟"
+        },
+        "en": {
+          "translation": "Can you keep up with technology?",
+          "hint": "to stay level with"
+        }
+      }
+    }
+  ]
+}

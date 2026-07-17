@@ -1,0 +1,618 @@
+{
+  "world": "business",
+  "version": 1,
+  "level1": [
+    {
+      "id": 1,
+      "phrase": "account for",
+      "verb": "account",
+      "sentence": "This ___ for the delay.",
+      "world": "business",
+      "distractors": [
+        "explain",
+        "describe",
+        "clarify"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "이것이 지체의 원인이다",
+          "hint": "설명하다"
+        },
+        "ja": {
+          "translation": "これが遅延の原因だ",
+          "hint": "説明する"
+        },
+        "zh": {
+          "translation": "这就是延误的原因",
+          "hint": "解释；说明原因"
+        },
+        "en": {
+          "translation": "This explains the delay.",
+          "hint": "to be the reason for"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "phrase": "apply for",
+      "verb": "apply",
+      "sentence": "She ___ for the job.",
+      "world": "business",
+      "distractors": [
+        "register",
+        "enroll",
+        "subscribe"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그녀는 그 일자리에 지원했다",
+          "hint": "지원하다"
+        },
+        "ja": {
+          "translation": "彼女はその仕事に応募した",
+          "hint": "応募する"
+        },
+        "zh": {
+          "translation": "她申请了那份工作",
+          "hint": "申请"
+        },
+        "en": {
+          "translation": "She applied for the job.",
+          "hint": "to formally request"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "phrase": "approve of",
+      "verb": "approve",
+      "sentence": "They ___ of the plan.",
+      "world": "business",
+      "distractors": [
+        "agree",
+        "support",
+        "accept"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 계획에 찬성했다",
+          "hint": "찬성하다"
+        },
+        "ja": {
+          "translation": "彼らはその計画に賛成した",
+          "hint": "賛成する"
+        },
+        "zh": {
+          "translation": "他们赞成这个计划",
+          "hint": "赞成；同意"
+        },
+        "en": {
+          "translation": "They approve of the plan.",
+          "hint": "to agree with"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "phrase": "call off",
+      "verb": "call",
+      "sentence": "They ___ off the meeting.",
+      "world": "business",
+      "distractors": [
+        "cancel",
+        "stop",
+        "end"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 회의를 취소했다",
+          "hint": "취소하다"
+        },
+        "ja": {
+          "translation": "彼らは会議を中止した",
+          "hint": "中止する"
+        },
+        "zh": {
+          "translation": "他们取消了会议",
+          "hint": "取消"
+        },
+        "en": {
+          "translation": "They called off the meeting.",
+          "hint": "to cancel"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "phrase": "carry out",
+      "verb": "carry",
+      "sentence": "We must ___ out the plan.",
+      "world": "business",
+      "distractors": [
+        "execute",
+        "implement",
+        "perform"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "우리는 계획을 실행해야 한다",
+          "hint": "수행하다"
+        },
+        "ja": {
+          "translation": "私たちは計画を実行しなければならない",
+          "hint": "実行する"
+        },
+        "zh": {
+          "translation": "我们必须执行这个计划",
+          "hint": "执行；实施"
+        },
+        "en": {
+          "translation": "We must carry out the plan.",
+          "hint": "to perform or complete"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "phrase": "deal with",
+      "verb": "deal",
+      "sentence": "He can't ___ with stress.",
+      "world": "business",
+      "distractors": [
+        "handle",
+        "manage",
+        "cope"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 스트레스를 감당할 수 없다",
+          "hint": "다루다/감당하다"
+        },
+        "ja": {
+          "translation": "彼はストレスに対処できない",
+          "hint": "対処する"
+        },
+        "zh": {
+          "translation": "他无法应对压力",
+          "hint": "处理；应对"
+        },
+        "en": {
+          "translation": "He can't deal with stress.",
+          "hint": "to handle or manage"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "phrase": "look into",
+      "verb": "look",
+      "sentence": "We'll ___ the problem.",
+      "world": "business",
+      "distractors": [
+        "investigate",
+        "examine",
+        "check"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "우리는 문제를 조사할 것이다",
+          "hint": "조사하다"
+        },
+        "ja": {
+          "translation": "私たちはその問題を調査する",
+          "hint": "調査する"
+        },
+        "zh": {
+          "translation": "我们会调查这个问题",
+          "hint": "调查；研究"
+        },
+        "en": {
+          "translation": "We'll look into the problem.",
+          "hint": "to investigate"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "phrase": "put off",
+      "verb": "put",
+      "sentence": "Don't ___ it off.",
+      "world": "business",
+      "distractors": [
+        "delay",
+        "postpone",
+        "defer"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그것을 미루지 마라",
+          "hint": "미루다"
+        },
+        "ja": {
+          "translation": "それを先延ばしにするな",
+          "hint": "延期する"
+        },
+        "zh": {
+          "translation": "别把它拖延了",
+          "hint": "推迟；拖延"
+        },
+        "en": {
+          "translation": "Don't put it off.",
+          "hint": "to postpone"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "phrase": "set up",
+      "verb": "set",
+      "sentence": "They ___ a company.",
+      "world": "business",
+      "distractors": [
+        "establish",
+        "found",
+        "create"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 회사를 설립했다",
+          "hint": "설립하다/세우다"
+        },
+        "ja": {
+          "translation": "彼らは会社を設立した",
+          "hint": "設立する"
+        },
+        "zh": {
+          "translation": "他们创办了一家公司",
+          "hint": "设立；创办"
+        },
+        "en": {
+          "translation": "They set up a company.",
+          "hint": "to establish"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "phrase": "stand for",
+      "verb": "stand",
+      "sentence": "What does it ___ for?",
+      "world": "business",
+      "distractors": [
+        "represent",
+        "mean",
+        "symbolize"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그것은 무엇을 의미하는가?",
+          "hint": "대표하다/의미하다"
+        },
+        "ja": {
+          "translation": "それは何を意味するのか？",
+          "hint": "表す；意味する"
+        },
+        "zh": {
+          "translation": "它代表什么意思？",
+          "hint": "代表；表示"
+        },
+        "en": {
+          "translation": "What does it stand for?",
+          "hint": "to represent"
+        }
+      }
+    }
+  ],
+  "level2": [
+    {
+      "id": 101,
+      "phrase": "add up to",
+      "verb": "add",
+      "preposition": "up to",
+      "sentence": "The costs ___ ___ $500.",
+      "world": "business",
+      "distractors": [
+        "to",
+        "for",
+        "with"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "비용이 합쳐서 500달러가 된다",
+          "hint": "합계가 ~이 되다"
+        },
+        "ja": {
+          "translation": "費用は合計で500ドルになる",
+          "hint": "合計～になる"
+        },
+        "zh": {
+          "translation": "费用加起来是500美元",
+          "hint": "合计达到"
+        },
+        "en": {
+          "translation": "The costs add up to $500.",
+          "hint": "to total"
+        }
+      }
+    },
+    {
+      "id": 102,
+      "phrase": "boil down to",
+      "verb": "boil",
+      "preposition": "down to",
+      "sentence": "It ___ ___ money.",
+      "world": "business",
+      "distractors": [
+        "to",
+        "for",
+        "about"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "결국 돈 문제다",
+          "hint": "결국 ~으로 귀결되다"
+        },
+        "ja": {
+          "translation": "結局はお金の問題だ",
+          "hint": "結局～に帰着する"
+        },
+        "zh": {
+          "translation": "归根结底是钱的问题",
+          "hint": "归结为"
+        },
+        "en": {
+          "translation": "It boils down to money.",
+          "hint": "to come down to"
+        }
+      }
+    },
+    {
+      "id": 103,
+      "phrase": "brush up on",
+      "verb": "brush",
+      "preposition": "up on",
+      "sentence": "I need to ___ ___ my French.",
+      "world": "business",
+      "distractors": [
+        "on",
+        "for",
+        "about"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "프랑스어를 다시 복습해야 한다",
+          "hint": "(지식을) 복습하다"
+        },
+        "ja": {
+          "translation": "フランス語を復習する必要がある",
+          "hint": "復習する"
+        },
+        "zh": {
+          "translation": "我需要复习一下法语",
+          "hint": "温习；重新学习"
+        },
+        "en": {
+          "translation": "I need to brush up on my French.",
+          "hint": "to review"
+        }
+      }
+    },
+    {
+      "id": 104,
+      "phrase": "buy into",
+      "verb": "buy",
+      "preposition": "into",
+      "sentence": "I didn't ___ ___ the idea.",
+      "world": "business",
+      "distractors": [
+        "to",
+        "for",
+        "on"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나는 그 생각에 동의하지 않았다",
+          "hint": "~에 투자하다/믿다"
+        },
+        "ja": {
+          "translation": "私はその考えに賛同しなかった",
+          "hint": "信じ込む；賛同する"
+        },
+        "zh": {
+          "translation": "我不认同这个想法",
+          "hint": "认同；接受（想法）"
+        },
+        "en": {
+          "translation": "I didn't buy into the idea.",
+          "hint": "to accept as true"
+        }
+      }
+    },
+    {
+      "id": 105,
+      "phrase": "catch up with",
+      "verb": "catch",
+      "preposition": "up with",
+      "sentence": "I'll ___ ___ you later.",
+      "world": "business",
+      "distractors": [
+        "to",
+        "for",
+        "on"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나중에 따라잡겠다",
+          "hint": "따라잡다"
+        },
+        "ja": {
+          "translation": "後で追いつくよ",
+          "hint": "追いつく"
+        },
+        "zh": {
+          "translation": "我稍后赶上你",
+          "hint": "赶上；跟上"
+        },
+        "en": {
+          "translation": "I'll catch up with you later.",
+          "hint": "to reach the same point"
+        }
+      }
+    },
+    {
+      "id": 106,
+      "phrase": "check up on",
+      "verb": "check",
+      "preposition": "up on",
+      "sentence": "He'll ___ ___ the patient.",
+      "world": "business",
+      "distractors": [
+        "on",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 환자를 점검할 것이다",
+          "hint": "점검하다/확인하다"
+        },
+        "ja": {
+          "translation": "彼は患者の様子を確認する",
+          "hint": "確認する"
+        },
+        "zh": {
+          "translation": "他会去查看病人的情况",
+          "hint": "查看；核查"
+        },
+        "en": {
+          "translation": "He'll check up on the patient.",
+          "hint": "to inspect"
+        }
+      }
+    },
+    {
+      "id": 107,
+      "phrase": "come down to",
+      "verb": "come",
+      "preposition": "down to",
+      "sentence": "It ___ ___ one thing.",
+      "world": "business",
+      "distractors": [
+        "to",
+        "for",
+        "about"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "결국 한 가지 문제다",
+          "hint": "결국 ~이 되다"
+        },
+        "ja": {
+          "translation": "結局は一つのことに尽きる",
+          "hint": "結局～に帰着する"
+        },
+        "zh": {
+          "translation": "最终归结为一件事",
+          "hint": "归结为"
+        },
+        "en": {
+          "translation": "It comes down to one thing.",
+          "hint": "to be ultimately about"
+        }
+      }
+    },
+    {
+      "id": 108,
+      "phrase": "come out with",
+      "verb": "come",
+      "preposition": "out with",
+      "sentence": "They ___ ___ a new product.",
+      "world": "business",
+      "distractors": [
+        "with",
+        "to",
+        "for"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 신제품을 출시했다",
+          "hint": "(제품을) 내놓다/발표하다"
+        },
+        "ja": {
+          "translation": "彼らは新製品を発表した",
+          "hint": "発表する；売り出す"
+        },
+        "zh": {
+          "translation": "他们推出了一款新产品",
+          "hint": "推出；发布"
+        },
+        "en": {
+          "translation": "They came out with a new product.",
+          "hint": "to release"
+        }
+      }
+    },
+    {
+      "id": 109,
+      "phrase": "cut back on",
+      "verb": "cut",
+      "preposition": "back on",
+      "sentence": "We need to ___ ___ spending.",
+      "world": "business",
+      "distractors": [
+        "on",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "지출을 줄여야 한다",
+          "hint": "줄이다/삭감하다"
+        },
+        "ja": {
+          "translation": "支出を減らす必要がある",
+          "hint": "削減する"
+        },
+        "zh": {
+          "translation": "我们需要削减开支",
+          "hint": "削减；减少"
+        },
+        "en": {
+          "translation": "We need to cut back on spending.",
+          "hint": "to reduce"
+        }
+      }
+    },
+    {
+      "id": 110,
+      "phrase": "do away with",
+      "verb": "do",
+      "preposition": "away with",
+      "sentence": "They ___ ___ the old rule.",
+      "world": "business",
+      "distractors": [
+        "with",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그들은 오래된 규칙을 폐지했다",
+          "hint": "폐지하다/없애다"
+        },
+        "ja": {
+          "translation": "彼らは古い規則を廃止した",
+          "hint": "廃止する"
+        },
+        "zh": {
+          "translation": "他们废除了旧规定",
+          "hint": "废除；取消"
+        },
+        "en": {
+          "translation": "They did away with the old rule.",
+          "hint": "to abolish"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "world": "daily",
+  "version": 1,
+  "level1": [
+    {
+      "id": 21,
+      "phrase": "believe in",
+      "verb": "believe",
+      "sentence": "We ___ in democracy.",
+      "world": "daily",
+      "distractors": [
+        "trust",
+        "faith",
+        "confidence"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "우리는 민주주의를 믿는다",
+          "hint": "믿다/신뢰하다"
+        },
+        "ja": {
+          "translation": "私たちは民主主義を信じている",
+          "hint": "信じる"
+        },
+        "zh": {
+          "translation": "我们信仰民主",
+          "hint": "信仰；相信"
+        },
+        "en": {
+          "translation": "We believe in democracy.",
+          "hint": "to have faith in"
+        }
+      }
+    },
+    {
+      "id": 22,
+      "phrase": "break down",
+      "verb": "break",
+      "sentence": "The car ___ down.",
+      "world": "daily",
+      "distractors": [
+        "fail",
+        "stop",
+        "crash"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "차가 고장 났다",
+          "hint": "고장 나다"
+        },
+        "ja": {
+          "translation": "車が故障した",
+          "hint": "故障する"
+        },
+        "zh": {
+          "translation": "汽车抛锚了",
+          "hint": "（机器）出故障"
+        },
+        "en": {
+          "translation": "The car broke down.",
+          "hint": "to stop working"
+        }
+      }
+    },
+    {
+      "id": 23,
+      "phrase": "come across",
+      "verb": "come",
+      "sentence": "I ___ across an old friend.",
+      "world": "daily",
+      "distractors": [
+        "encounter",
+        "meet",
+        "find"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "우연히 옛 친구를 만났다",
+          "hint": "우연히 만나다"
+        },
+        "ja": {
+          "translation": "偶然、昔の友人に出会った",
+          "hint": "偶然出会う"
+        },
+        "zh": {
+          "translation": "我偶然遇到了一位老朋友",
+          "hint": "偶然遇见"
+        },
+        "en": {
+          "translation": "I came across an old friend.",
+          "hint": "to meet by chance"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "phrase": "depend on",
+      "verb": "depend",
+      "sentence": "It ___ on the weather.",
+      "world": "daily",
+      "distractors": [
+        "rely",
+        "count",
+        "rest"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그것은 날씨에 달렸다",
+          "hint": "의존하다/달려있다"
+        },
+        "ja": {
+          "translation": "それは天気次第だ",
+          "hint": "～次第である"
+        },
+        "zh": {
+          "translation": "这取决于天气",
+          "hint": "取决于；依赖"
+        },
+        "en": {
+          "translation": "It depends on the weather.",
+          "hint": "to rely on"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "phrase": "dream of",
+      "verb": "dream",
+      "sentence": "I ___ of traveling.",
+      "world": "daily",
+      "distractors": [
+        "imagine",
+        "envision",
+        "aspire"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나는 여행을 꿈꾼다",
+          "hint": "꿈꾸다"
+        },
+        "ja": {
+          "translation": "私は旅行することを夢見ている",
+          "hint": "夢見る"
+        },
+        "zh": {
+          "translation": "我梦想去旅行",
+          "hint": "梦想；向往"
+        },
+        "en": {
+          "translation": "I dream of traveling.",
+          "hint": "to wish for"
+        }
+      }
+    },
+    {
+      "id": 26,
+      "phrase": "feel like",
+      "verb": "feel",
+      "sentence": "I don't ___ like eating.",
+      "world": "daily",
+      "distractors": [
+        "want",
+        "desire",
+        "crave"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나는 먹고 싶지 않다",
+          "hint": "~하고 싶다"
+        },
+        "ja": {
+          "translation": "私は食べたい気分ではない",
+          "hint": "～したい気がする"
+        },
+        "zh": {
+          "translation": "我不想吃东西",
+          "hint": "想要（做）"
+        },
+        "en": {
+          "translation": "I don't feel like eating.",
+          "hint": "to want to"
+        }
+      }
+    },
+    {
+      "id": 27,
+      "phrase": "look after",
+      "verb": "look",
+      "sentence": "She ___ her mother.",
+      "world": "daily",
+      "distractors": [
+        "care",
+        "watch",
+        "attend"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그녀는 어머니를 돌본다",
+          "hint": "돌보다"
+        },
+        "ja": {
+          "translation": "彼女は母親の世話をする",
+          "hint": "世話をする"
+        },
+        "zh": {
+          "translation": "她照顾她的母亲",
+          "hint": "照顾"
+        },
+        "en": {
+          "translation": "She looks after her mother.",
+          "hint": "to take care of"
+        }
+      }
+    },
+    {
+      "id": 28,
+      "phrase": "look for",
+      "verb": "look",
+      "sentence": "I'm ___ my keys.",
+      "world": "daily",
+      "distractors": [
+        "search",
+        "seek",
+        "hunt"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "나는 열쇠를 찾고 있다",
+          "hint": "찾다"
+        },
+        "ja": {
+          "translation": "私は鍵を探している",
+          "hint": "探す"
+        },
+        "zh": {
+          "translation": "我在找我的钥匙",
+          "hint": "寻找"
+        },
+        "en": {
+          "translation": "I'm looking for my keys.",
+          "hint": "to search for"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "phrase": "pay for",
+      "verb": "pay",
+      "sentence": "He ___ for dinner.",
+      "world": "daily",
+      "distractors": [
+        "cover",
+        "settle",
+        "bear"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 저녁을 샀다",
+          "hint": "비용을 지불하다"
+        },
+        "ja": {
+          "translation": "彼が夕食代を払った",
+          "hint": "代金を払う"
+        },
+        "zh": {
+          "translation": "他付了晚餐的钱",
+          "hint": "付款；买单"
+        },
+        "en": {
+          "translation": "He paid for dinner.",
+          "hint": "to give money for"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "phrase": "put on",
+      "verb": "put",
+      "sentence": "She ___ her coat.",
+      "world": "daily",
+      "distractors": [
+        "wear",
+        "don",
+        "dress"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그녀는 코트를 입었다",
+          "hint": "입다/착용하다"
+        },
+        "ja": {
+          "translation": "彼女はコートを着た",
+          "hint": "身につける"
+        },
+        "zh": {
+          "translation": "她穿上了外套",
+          "hint": "穿上；戴上"
+        },
+        "en": {
+          "translation": "She put on her coat.",
+          "hint": "to dress in"
+        }
+      }
+    }
+  ],
+  "level2": [
+    {
+      "id": 121,
+      "phrase": "break away from",
+      "verb": "break",
+      "preposition": "away from",
+      "sentence": "The dog ___ ___ its owner.",
+      "world": "daily",
+      "distractors": [
+        "from",
+        "to",
+        "with"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "개가 주인에게서 떨어져 나왔다",
+          "hint": "떨어져 나오다/탈출하다"
+        },
+        "ja": {
+          "translation": "犬が飼い主から離れて逃げた",
+          "hint": "離脱する；逃れる"
+        },
+        "zh": {
+          "translation": "狗从主人身边挣脱跑开了",
+          "hint": "挣脱；脱离"
+        },
+        "en": {
+          "translation": "The dog broke away from its owner.",
+          "hint": "to escape from"
+        }
+      }
+    },
+    {
+      "id": 122,
+      "phrase": "burn down to",
+      "verb": "burn",
+      "preposition": "down to",
+      "sentence": "The house ___ ___ ashes.",
+      "world": "daily",
+      "distractors": [
+        "to",
+        "for",
+        "about"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "집이 타서 재가 되었다",
+          "hint": "타서 없어지다"
+        },
+        "ja": {
+          "translation": "家が焼けて灰になった",
+          "hint": "焼け落ちる"
+        },
+        "zh": {
+          "translation": "房子被烧成了灰烬",
+          "hint": "烧毁；烧成"
+        },
+        "en": {
+          "translation": "The house burned down to ashes.",
+          "hint": "to be destroyed by fire"
+        }
+      }
+    },
+    {
+      "id": 123,
+      "phrase": "clean up after",
+      "verb": "clean",
+      "preposition": "up after",
+      "sentence": "Mom ___ ___ the kids.",
+      "world": "daily",
+      "distractors": [
+        "after",
+        "for",
+        "with"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "엄마는 아이들 뒤를 치운다",
+          "hint": "뒤를 치우다"
+        },
+        "ja": {
+          "translation": "母は子供たちの後片付けをする",
+          "hint": "後始末をする"
+        },
+        "zh": {
+          "translation": "妈妈收拾孩子们弄乱的东西",
+          "hint": "收拾…留下的脏乱"
+        },
+        "en": {
+          "translation": "Mom cleans up after the kids.",
+          "hint": "to tidy the mess someone made"
+        }
+      }
+    },
+    {
+      "id": 124,
+      "phrase": "come across as",
+      "verb": "come",
+      "preposition": "across as",
+      "sentence": "She ___ ___ shy.",
+      "world": "daily",
+      "distractors": [
+        "as",
+        "to",
+        "for"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그녀는 수줍어 보인다",
+          "hint": "~로 보이다"
+        },
+        "ja": {
+          "translation": "彼女は内気そうに見える",
+          "hint": "～という印象を与える"
+        },
+        "zh": {
+          "translation": "她给人害羞的印象",
+          "hint": "给人…的印象"
+        },
+        "en": {
+          "translation": "She comes across as shy.",
+          "hint": "to give an impression of"
+        }
+      }
+    },
+    {
+      "id": 125,
+      "phrase": "come down with",
+      "verb": "come",
+      "preposition": "down with",
+      "sentence": "He ___ ___ the flu.",
+      "world": "daily",
+      "distractors": [
+        "with",
+        "for",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 독감에 걸렸다",
+          "hint": "(병에) 걸리다"
+        },
+        "ja": {
+          "translation": "彼はインフルエンザにかかった",
+          "hint": "（病気に）かかる"
+        },
+        "zh": {
+          "translation": "他得了流感",
+          "hint": "染上（疾病）"
+        },
+        "en": {
+          "translation": "He came down with the flu.",
+          "hint": "to catch an illness"
+        }
+      }
+    },
+    {
+      "id": 126,
+      "phrase": "drop out of",
+      "verb": "drop",
+      "preposition": "out of",
+      "sentence": "He ___ ___ school.",
+      "world": "daily",
+      "distractors": [
+        "of",
+        "from",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 학교를 중퇴했다",
+          "hint": "중도에 그만두다"
+        },
+        "ja": {
+          "translation": "彼は学校を中退した",
+          "hint": "中退する；脱落する"
+        },
+        "zh": {
+          "translation": "他从学校退学了",
+          "hint": "退出；辍学"
+        },
+        "en": {
+          "translation": "He dropped out of school.",
+          "hint": "to quit before finishing"
+        }
+      }
+    },
+    {
+      "id": 127,
+      "phrase": "fit in with",
+      "verb": "fit",
+      "preposition": "in with",
+      "sentence": "He doesn't ___ ___ the team.",
+      "world": "daily",
+      "distractors": [
+        "with",
+        "to",
+        "for"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "그는 팀에 맞지 않는다",
+          "hint": "어울리다/적응하다"
+        },
+        "ja": {
+          "translation": "彼はチームになじめない",
+          "hint": "溶け込む；なじむ"
+        },
+        "zh": {
+          "translation": "他融入不了这个团队",
+          "hint": "融入；合得来"
+        },
+        "en": {
+          "translation": "He doesn't fit in with the team.",
+          "hint": "to belong in a group"
+        }
+      }
+    },
+    {
+      "id": 128,
+      "phrase": "grow out of",
+      "verb": "grow",
+      "preposition": "out of",
+      "sentence": "Kids ___ ___ their clothes.",
+      "world": "daily",
+      "distractors": [
+        "of",
+        "from",
+        "to"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "아이들이 자라서 옷이 작아졌다",
+          "hint": "자라서 안 맞게 되다"
+        },
+        "ja": {
+          "translation": "子供は成長して服が着られなくなる",
+          "hint": "成長して合わなくなる"
+        },
+        "zh": {
+          "translation": "孩子们长大后衣服就穿不下了",
+          "hint": "长大后不再适合"
+        },
+        "en": {
+          "translation": "Kids grow out of their clothes.",
+          "hint": "to become too big for"
+        }
+      }
+    },
+    {
+      "id": 129,
+      "phrase": "hang out with",
+      "verb": "hang",
+      "preposition": "out with",
+      "sentence": "I ___ ___ my friends.",
+      "world": "daily",
+      "distractors": [
+        "with",
+        "to",
+        "for"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "친구들과 어울린다",
+          "hint": "함께 시간을 보내다"
+        },
+        "ja": {
+          "translation": "友達と一緒に過ごす",
+          "hint": "一緒に遊ぶ・過ごす"
+        },
+        "zh": {
+          "translation": "我和朋友们一起玩",
+          "hint": "一起消磨时间"
+        },
+        "en": {
+          "translation": "I hang out with my friends.",
+          "hint": "to spend time with"
+        }
+      }
+    },
+    {
+      "id": 130,
+      "phrase": "let go of",
+      "verb": "let",
+      "preposition": "go of",
+      "sentence": "___ ___ my hand.",
+      "world": "daily",
+      "distractors": [
+        "of",
+        "for",
+        "from"
+      ],
+      "meaning": {
+        "ko": {
+          "translation": "내 손을 놔줘",
+          "hint": "놓다/해방하다"
+        },
+        "ja": {
+          "translation": "私の手を離して",
+          "hint": "手放す；離す"
+        },
+        "zh": {
+          "translation": "放开我的手",
+          "hint": "放开；松手"
+        },
+        "en": {
+          "translation": "Let go of my hand.",
+          "hint": "to release"
+        }
+      }
+    }
+  ]
+}

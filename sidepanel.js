@@ -135,6 +135,24 @@ class TOEICGame {
 
     // 테마 적용
     this.applyTheme(this.settings.theme || 'purple');
+
+    // 콘텐츠 로드: 캐시 반영 → 화면 갱신 → 서버 최신본 백그라운드 확인
+    this.initContent();
+  }
+
+  // 서버/캐시 콘텐츠 연동 (시드는 이미 즉시 로드됨)
+  async initContent() {
+    const applyContent = () => {
+      this._contentWorlds = null; // 월드 캐시 무효화 (새 콘텐츠 반영)
+      this.renderWorldMap();
+      this.renderAboutMeta();
+    };
+    // 1) 캐시된 팩 반영
+    await ContentStore.init();
+    applyContent();
+    // 2) 서버가 더 최신이면 받아온 뒤 다시 반영
+    ContentStore.onChange(applyContent);
+    ContentStore.refresh();
   }
 
   // === 콘텐츠/월드 헬퍼 ===
@@ -144,7 +162,7 @@ class TOEICGame {
     if (!this._contentWorlds) {
       this._contentWorlds = new Set();
       ['level1', 'level2'].forEach(lv => {
-        TOEIC_PHRASES[lv].forEach(q => this._contentWorlds.add(q.world));
+        ContentStore.phrases[lv].forEach(q => this._contentWorlds.add(q.world));
       });
     }
     return this._contentWorlds.has(worldKey);
@@ -166,7 +184,7 @@ class TOEICGame {
       } catch (e) { /* 확장 컨텍스트가 아니면 기본값 */ }
       this.elements.aboutVersion.textContent = `v${version}`;
     }
-    const phrases = TOEIC_PHRASES.level1.length + TOEIC_PHRASES.level2.length;
+    const phrases = ContentStore.phrases.level1.length + ContentStore.phrases.level2.length;
     if (this.elements.aboutStatPhrases) this.elements.aboutStatPhrases.textContent = phrases;
     if (this.elements.aboutStatWorlds) this.elements.aboutStatWorlds.textContent = this.playableWorlds().length;
     if (this.elements.aboutStatLevels) this.elements.aboutStatLevels.textContent = Object.keys(LEVELS).length;
@@ -362,7 +380,7 @@ class TOEICGame {
 
   // 게임 시작 (월드/레벨 기준으로 문제 구성)
   startGame(level) {
-    const allQuestions = TOEIC_PHRASES[`level${level}`].filter(q => q.world === this.currentWorld);
+    const allQuestions = ContentStore.phrases[`level${level}`].filter(q => q.world === this.currentWorld);
     const questionCount = this.settings.debugMode ? 1 : LEVELS[level].questionsPerGame;
     const questions = this.shuffleArray(allQuestions).slice(0, questionCount);
     this.beginRound(level, questions, false);
