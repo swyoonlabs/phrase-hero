@@ -76,7 +76,6 @@ class TOEICGame {
 
       // 설정
       startLevelRadios: document.querySelectorAll('input[name="startLevel"]'),
-      debugMode: document.getElementById('debugMode'),
       resetProgressBtn: document.getElementById('resetProgressBtn'),
       themeSelector: document.getElementById('themeSelector'),
       langSelector: document.getElementById('langSelector'),
@@ -845,7 +844,7 @@ class TOEICGame {
   saveSettings() {
     const startLevel = parseInt(document.querySelector('input[name="startLevel"]:checked').value);
     this.settings.startLevel = startLevel;
-    this.settings.debugMode = this.elements.debugMode.checked;
+    // debugMode는 UI에서 제거됨(개발자 전용). 기존 this.settings.debugMode 값을 그대로 보존.
     this.persistSettings();
   }
 
@@ -853,7 +852,6 @@ class TOEICGame {
     this.elements.startLevelRadios.forEach(radio => {
       radio.checked = parseInt(radio.value) === this.settings.startLevel;
     });
-    this.elements.debugMode.checked = this.settings.debugMode;
 
     // 테마 선택
     const themeOptions = this.elements.themeSelector.querySelectorAll('.theme-option');
@@ -868,7 +866,6 @@ class TOEICGame {
     this.elements.startLevelRadios.forEach(radio => {
       radio.addEventListener('change', () => this.saveSettings());
     });
-    this.elements.debugMode.addEventListener('change', () => this.saveSettings());
 
     // 테마 선택 이벤트
     themeOptions.forEach(option => {
